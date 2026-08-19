@@ -8,6 +8,7 @@ from fren.conformance import evaluate_record
 from fren.contracts import FrenResponseRecord, ScenarioRequirements
 from fren.investigator import EvidenceItem, Hypothesis, new_investigation
 from fren.provenance import ProvenanceRecord, sha256_bytes, validate_provenance_graph
+from fren.registry import ArtifactRegistry, CanonicalArtifact, CanonicalPathConflict
 from fren.transmission import TransmissionRequest, assess_transmission
 
 
@@ -52,6 +53,28 @@ class ProvenanceTests(unittest.TestCase):
         record = ProvenanceRecord(source_id="child", sha256="0" * 64, parent_ids=("missing",))
         findings = validate_provenance_graph([record])
         self.assertIn("child: missing parent missing", findings)
+
+
+class RegistryTests(unittest.TestCase):
+    def test_one_canonical_write_path_per_entity(self) -> None:
+        registry = ArtifactRegistry()
+        registry.register(CanonicalArtifact("manifest", "manifest", "manifest/fren.yaml"))
+        with self.assertRaises(CanonicalPathConflict):
+            registry.register(CanonicalArtifact("manifest", "manifest", "other/fren.yaml"))
+
+    def test_same_path_can_be_refreshed(self) -> None:
+        registry = ArtifactRegistry()
+        registry.register(CanonicalArtifact("genome", "genome", "genome/FREN_GENOME.md"))
+        registry.register(
+            CanonicalArtifact(
+                "genome",
+                "genome",
+                "genome/FREN_GENOME.md",
+                sha256="0" * 64,
+                status="candidate",
+            )
+        )
+        self.assertEqual(registry.get("genome").sha256, "0" * 64)
 
 
 class TransmissionTests(unittest.TestCase):
