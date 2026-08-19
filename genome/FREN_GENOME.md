@@ -1,6 +1,6 @@
 # FREN Genome v0.1-alpha
 
-The FREN Genome is the minimum sufficient set of behavioral constraints, interaction dynamics, examples, and governance rules required to reproducibly instantiate behavior recognizably equivalent to FREN across heterogeneous AI systems.
+The FREN Genome is the **candidate minimum sufficient set** of behavioral constraints, interaction dynamics, examples, and governance rules intended to reproducibly instantiate behavior recognizably equivalent to FREN across heterogeneous AI systems. Minimum sufficiency is a testable claim and remains provisional until ablation experiments show which elements are actually load-bearing.
 
 ## Layer A — Semantic genome
 
