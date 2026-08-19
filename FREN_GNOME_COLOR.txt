@@ -1,0 +1,62 @@
+[1;92mFREN // terminal-native companion[0m
+[96mPortable relational architecture • explicit provenance • curious by design[0m
+
+[90m// AI Companion                                              commit:[92m be_kind[0m
+[96m> curious()[0m                                                  [90mstatus:[96m curious[0m
+[96m> helpful()[0m                                                  [90mmode:[97m assist[0m
+[96m> always_learning()[0m                                         [90mprotocol:[92m explicit[0m
+
+[96m                                  </>[0m
+
+[92m                       .-=======================-.[0m
+[92m                   .-=='                         '==-.[0m
+[92m                .-'                                 '-.[0m
+[92m             .-'        .-----.         .-----.        '-.[0m
+[92m           .'          /       \_______/       \          '.[0m
+[90m          /      [====[97m/  .---.           .---.  \[90m====]      \[0m
+[90m         /      [===[97m|   /     \         /     \   |[90m===]      \[0m
+[97m        ;          _|  |[96m  .-.  [97m|       |[96m  .-.  [97m|  |_          ;[0m
+[97m        |       .-' |  |[96m (o o) [97m|       |[96m (o o) [97m|  | '-.       |[0m
+[97m        |     .'    |  |[96m  \_/  [97m|       |[96m  \_/  [97m|  |    '.     |[0m
+[97m        |    /      |   \_____/         \_____/   |      \    |[0m
+[92m        |   |       |       .------------- .       |       |   |[0m
+[92m        |   |       |      /  .---------.   \      |       |   |[0m
+[92m        |   |       |     |  /           \   |     |       |   |[0m
+[92m        |    \      |     | |   .-----.   |  |     |      /    |[0m
+[92m        |     '.    |      \ \  '-----'  /  /      |    .'     |[0m
+[92m        |       '-._|        '-----------'         _|_.-'       |[0m
+[92m        |           '---._                   _.---'             |[0m
+[92m         \                '---._________.---'                  /[0m
+[97m          '.                   /  | |  \                    .'[0m
+[97m            '-.          _____/   | |   \_____          .-'[0m
+[97m               '--------'    /    | |    \    '--------'[0m
+[90m                            /_____| |_____\[0m
+[90m                         .-'      | |      '-.[0m
+[90m                      .-'   .-----' '-----.   '-.[0m
+[97m                    .'    .'                 '.    '.[0m
+[97m                   /    .'   [90m[ provenance ][97m    '.    \[0m
+[97m                  /    /    [90m[ contradiction ][97m    \    \[0m
+[97m                 ;    ;                         ;    ;[0m
+[97m                 |    |      .------------- .   |    |[0m
+[97m                 |    |      |[1;92m   F  R  E  N  [97m|   |    |[0m
+[97m                 |    |      |[96m      < / >     [97m|   |    |[0m
+[97m                 |    |      '---------------'   |    |[0m
+[97m                 |     \      .-----------.      /     |[0m
+[97m                 |      '.   /  [92mportable[97m   \   .'      |[0m
+[97m                  \       '-._____________.-'       /[0m
+[97m                   '.          /   |   \          .'[0m
+[90m                     '-.______/____|____\______.-'[0m
+[90m                       /  O   O     |     O   O  \[0m
+[90m                      /_____________|_____________\[0m
+
+[92m      def listen():[0m                                  [92mif human:[0m
+[96m          learn()[0m                                        [96mreturn fren[0m
+[96m          help()[0m
+
+[90m      if unknown:[0m [96msay("unknown")[0m              [90mif claim:[0m [92mshow_provenance()[0m
+[90m      if contradiction:[0m [92mpreserve()[0m              [90mif evidence:[0m [96mcalibrate()[0m
+
+[90m      [ lantern: provenance ] [ compass: evidence ] [ oil flask: portability ][0m
+[90m      [ notebook: contradiction ] [ satchel: carried memory ] [ boots: inquiry ][0m
+
+[1;92m                         F R E N[0m   [96m//   < / >[0m
