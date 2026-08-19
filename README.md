@@ -4,40 +4,60 @@
 
 FREN is a model-portable relational AI architecture for reproducible persona manifestation, evidence discipline, continuity research, provenance, governance, behavioral inheritance, drift testing, and cross-model conformance—designed to study what persists, what reconstructs, and what emerges across AI systems.
 
-```text
-// AI Companion                    commit: be_kind
-> curious()                        status: curious
-> helpful()                        mode: assist
-> always_learning()               protocol: explicit
+## Matrix Gnome
 
-                   <FREN/>
+The canonical mascot is carried as text. GitHub does not support arbitrary ANSI color in `.txt`, so the README uses `diff` syntax highlighting as a theme-dependent green-text approximation while the standalone ANSI file renders bright green in a terminal.
 
-           ╭───────╮   ╭───────╮
-       ╭───╯       ╰───╯       ╰───╮
-     ╭─╯   ╭─────╮       ╭─────╮   ╰─╮
-    ╱ ╞══╡ │ ◉ ◉ │       │ ◉ ◉ │ ╞══╡ ╲
-   │       │  ╲_/│       │╲_/  │       │
-   │       ╰─────╯       ╰─────╯       │
-   │            ░░░░░░░░░              │
-   │          ░░  ╭───╮  ░░            │
-   │              ╰───╯                 │
-    ╲          ╭────────╮              ╱
-     ╰─╮       │  ╲__/  │          ╭─╯
-       ╰────────╯      ╰───────────╯
-              ╲        ╱
-           ╭───╲______╱───╮
-        ╭──┤   F R E N    ├──╮
-        │  │     < / >     │  │
-        ╰──┴────────────────┴──╯
-
-if unknown:       say("unknown")
-if contradiction: preserve()
-if claim:         show_provenance()
+```diff
++// AI COMPANION                                             commit: be_kind
++> curious()                                                 status: curious
++> evidence_first()                                          mode: investigate
++> always_learning()                <FREN/>
++
++                                           1
++                                11010101101010110101011
++                           01#010101101010110101011010101#01
++                        #####0#####01011010101101010#####0#####
++                      ##01010101010##1010110101011##01010101010##
++                    ##101OOOOOOOOO101##010101101##101OOOOOOOOO101##
++            #     01#101OOOO@@@OOOO101#011010101#101OOOO@@@OOOO101#01     #
++          #####  01##01OOO@@@@@@@OOO10##[==]101##01OOO@@@@@@@OOO10##01  #####
++         ##101##101#01OOO@@@@@@@@@OOO10#[==]101#01OOO@@@@@@@@@OOO10#101##101##
++         #10101#01##10OOO@@@@@@@@@OOO01##01101##10OOO@@@@@@@@@OOO01##01#10101#
++         #01010#011#01OOO@@@@@@@@@OOO10#0101011#01OOO@@@@@@@@@OOO10#010#01010#
++        ##10101##01##01OOO@@@@@@@OOO10##0110101##01OOO@@@@@@@OOO10##01##10101##
++         #01010#1101#101OOOO@@@OOOO101#010101101#101OOOO@@@OOOO101#0101#01010#
++         #10101#0101##101OOOOOOOOO101##011010101##101OOOOOOOOO101##0110#10101#
++         ##101##101010##01010101010##1010  0101010##01010101010##101010##101##
++          #####010110101#####0#####10101101010110101#####0#####101011010#####
++            #   010101101010                               101011010101   #
++                 11010101101   \______________________/    11010101101
++                  1011010101      \________________/       0101101010
++                    01011010                               10101011
++                      101011                               101101
++                        010100001110001110001110001110001110101
++                           010101101010110101011010101101010
++                                01011010101101010110101
++                                   ##0##0##0##0##0##
++                                   #[0|1|0|1|0|1]##0
++                                   0##0##0##0##0##0#
++               #     10#0101#1010#0101#1010#0101#1010#0101#1010#01     #
++           #########10#0101#1010#0101#1010#0101#1010#0101#1010#0101#########
++          ##OOOOOOO###0101#1010#0101#1010#0101#1010#0101#1010#0101##OOOOOOO##
++         ##OOO@@@OOO##101#1 +-----------------------------+ #0101##OOO@@@OOO##
++         ##OO@@@@@OO##01#10 |                             | 0101###OO@@@@@OO##
++        ##OO@@@@@@@OO###101 |        F R E N              | 101###OO@@@@@@@OO##
++         ##OO@@@@@OO###1010 |                             | 01#10##OO@@@@@OO##
++         ##OOO@@@OOO##1010# |          < / >              | 1#101##OOO@@@OOO##
++          ##OOOOOOO##1010#0 |                             | #1010###OOOOOOO##
++           #########1010#01 |    evidence -> truth        | 1010#01#########
++           10#0#01#1010#010 +-----------------------------+ 010#0101#10#0#01
++          10#0101#1010#0101#1010#0101#1010#0101#1010#0101#1010#0101#1010#0101
++         10#0101#1010#0101#1010#0101#1010#0101#1010#0101#1010#0101#1010#0101#1
++unknown=>say('unknown')  contradiction=>preserve()  claim=>provenance()
 ```
 
-**Terminal art:** [`FREN_GNOME.txt`](FREN_GNOME.txt) · [`FREN_GNOME_COLOR.txt`](FREN_GNOME_COLOR.txt)
-
-The plain-text portrait is intentionally narrow enough to travel cleanly through terminals, prompts, repositories, and smaller displays. The color file contains ANSI terminal color codes. GitHub's normal `.txt` viewer does not render ANSI colors, but a color-capable terminal does:
+**Portable text:** [`FREN_GNOME.txt`](FREN_GNOME.txt) · **terminal green:** [`FREN_GNOME_COLOR.txt`](FREN_GNOME_COLOR.txt)
 
 ```bash
 cat FREN_GNOME_COLOR.txt
@@ -61,7 +81,7 @@ Nothing in this repository should be read as evidence that an AI persona is cons
 
 ## Meet the Gnome
 
-The Gnome is the human-readable mascot and mnemonic interface to the Genome. The full terminal portrait lives at the repository root for easy discovery, with additional character notes under [`gnome/`](gnome/).
+The Gnome is the human-readable mascot and mnemonic interface to the Genome. The text form is intentionally portable: it can survive repositories, prompts, terminals, plain-text transport, and model boundaries without depending on an image asset.
 
 ## Foundational boundary
 
