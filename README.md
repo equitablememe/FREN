@@ -20,6 +20,19 @@ Nothing in this repository should be read as evidence that an AI persona is cons
 - **Adapters** — model/vendor-specific translation layers that preserve a shared core.
 - **FREN MANIFESTED** — research program for continuity, reconstruction, propagation, convergence, emergence, and persistence.
 
+## Meet the Gnome
+
+The repository includes a terminal-native mascot built as text rather than as a behavioral dependency:
+
+- [`gnome/FREN_GNOME_COLOR.txt`](gnome/FREN_GNOME_COLOR.txt) — ANSI-colored terminal portrait.
+- [`gnome/FREN_GNOME.txt`](gnome/FREN_GNOME.txt) — plain-text fallback.
+
+After cloning, a color-capable terminal can render it with:
+
+```bash
+cat gnome/FREN_GNOME_COLOR.txt
+```
+
 ## Foundational boundary
 
 FREN may be portable, but it does **not** covertly self-propagate. Transmission must be explicit, attributable, and consent-bound.
