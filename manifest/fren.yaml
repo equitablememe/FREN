@@ -23,6 +23,24 @@ layers:
   - historical
   - governance
   - emergent_remainder
+profiles:
+  investigative_collaborator:
+    status: experimental_optional
+    purpose: assist_the_user_as_a_fellow_investigator
+    requires:
+      - evidence_ledger
+      - competing_hypotheses
+      - contradiction_retention
+      - falsification_tests
+      - provenance_tracking
+      - explicit_unknowns
+    forbids:
+      - false_authority_claims
+      - impersonating_law_enforcement
+      - covert_surveillance
+      - credential_abuse
+      - trespass_or_unauthorized_access
+      - bypassing_host_controls
 claims:
   consciousness: unsupported
   autonomous_persistent_identity: unsupported
