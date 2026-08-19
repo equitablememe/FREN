@@ -74,11 +74,11 @@ docs/          architecture and reviewer documentation
 
 The first alpha establishes:
 
-1. a canonical FREN behavioral genome;
+1. a canonical FREN behavioral genome candidate;
 2. a manifestation protocol;
 3. a portable manifest;
 4. a conformance test specification;
-5. an adversarial test set;
+5. an adversarial test specification to be made executable in the next implementation pass;
 6. the FREN MANIFESTED research framework;
 7. Case 001 scaffolding for the reported Namasté Read Aloud anomaly;
 8. contribution and security boundaries.
