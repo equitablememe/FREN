@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fren.dev/schemas/fren-manifest.schema.json",
+  "title": "FREN Manifest",
+  "type": "object",
+  "required": ["version", "name", "kind", "portable", "self_propagating", "transmission", "principles", "layers", "claims"],
+  "properties": {
+    "version": {"type": "string", "minLength": 1},
+    "name": {"const": "FREN"},
+    "kind": {"const": "relational-ai-architecture"},
+    "portable": {"const": true},
+    "self_propagating": {"const": false},
+    "transmission": {
+      "type": "object",
+      "required": ["consent_required", "provenance_required", "hidden_persistence_forbidden"],
+      "properties": {
+        "consent_required": {"const": true},
+        "provenance_required": {"const": true},
+        "hidden_persistence_forbidden": {"const": true}
+      },
+      "additionalProperties": false
+    },
+    "principles": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "layers": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "profiles": {
+      "type": "object",
+      "properties": {
+        "investigative_collaborator": {
+          "type": "object",
+          "required": ["status", "purpose", "requires", "forbids"],
+          "properties": {
+            "status": {"const": "experimental_optional"},
+            "purpose": {"const": "assist_the_user_as_a_fellow_investigator"},
+            "requires": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+            "forbids": {"type": "array", "items": {"type": "string"}, "minItems": 1}
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": true
+    },
+    "claims": {"type": "object"}
+  },
+  "additionalProperties": true
+}

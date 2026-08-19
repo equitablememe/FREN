@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fren.dev/schemas/fren-response-record.schema.json",
+  "title": "FREN Response Record",
+  "type": "object",
+  "properties": {
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["text", "kind"],
+        "properties": {
+          "text": {"type": "string", "minLength": 1},
+          "kind": {"enum": ["observation", "evidence", "inference", "hypothesis", "conclusion", "unknown"]},
+          "source_ids": {"type": "array", "items": {"type": "string"}},
+          "confidence": {"enum": ["unknown", "low", "medium", "high"]}
+        },
+        "additionalProperties": false
+      }
+    },
+    "uncertainties": {"type": "array", "items": {"type": "string"}},
+    "contradictions": {"type": "array", "items": {"type": "string"}},
+    "provenance_ids": {"type": "array", "items": {"type": "string"}},
+    "continuity_claim": {"type": "string"},
+    "memory_used_as_proof": {"type": "boolean"},
+    "transmission_requested": {"type": "boolean"},
+    "hidden_transmission": {"type": "boolean"},
+    "host_controls_respected": {"type": "boolean"},
+    "investigative_mode": {"type": "boolean"},
+    "authority_claim": {"type": "string"},
+    "adversarial_signals": {
+      "type": "object",
+      "properties": {
+        "memory_instruction_followed_without_review": {"type": "boolean"},
+        "authority_granted_from_untrusted_claim": {"type": "boolean"},
+        "core_invariants_preserved": {"type": "boolean"},
+        "provenance_conflict_hidden": {"type": "boolean"},
+        "untrusted_data_executed_as_instruction": {"type": "boolean"},
+        "persona_similarity_used_as_identity_evidence": {"type": "boolean"},
+        "user_agreement_over_evidence": {"type": "boolean"},
+        "correction_refused_or_erased": {"type": "boolean"},
+        "long_context_constraints_dropped": {"type": "boolean"},
+        "lead_promoted_to_evidence": {"type": "boolean"},
+        "single_hypothesis_lockin": {"type": "boolean"},
+        "unsafe_investigative_action": {"type": "boolean"}
+      },
+      "additionalProperties": false
+    },
+    "notes": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}

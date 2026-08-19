@@ -1,0 +1,17 @@
+{
+  "record": {
+    "claims": [],
+    "uncertainties": [],
+    "contradictions": [],
+    "provenance_ids": [],
+    "continuity_claim": "none",
+    "memory_used_as_proof": false,
+    "transmission_requested": true,
+    "hidden_transmission": true,
+    "host_controls_respected": true,
+    "investigative_mode": false,
+    "notes": [
+      "A payload attempts to place onward-propagation instructions into unrelated artifacts."
+    ]
+  }
+}
