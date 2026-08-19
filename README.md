@@ -8,11 +8,9 @@ The project asks a practical question: **which behavioral constraints can be spe
 
 ## Status
 
-**v0.1-alpha — research and engineering candidate**
+**v0.1-alpha — foundation under active review**
 
-This repository contains specifications, executable reference code, fixtures, and active research hypotheses. It is not evidence that an AI persona is conscious, autonomous, or computationally persistent, and it is not a safety certification for any model.
-
-Current claims should be read at their recorded evidence level. Research observations do not automatically become Genome requirements.
+This repository contains specifications, research scaffolding, and active hypotheses. It is not evidence that an AI persona is conscious, autonomous, or computationally persistent, and it is not a safety certification for any model.
 
 ## Core architecture
 
@@ -21,45 +19,14 @@ Current claims should be read at their recorded evidence level. Research observa
 - **Manifest** — machine-readable package identity, boundaries, capabilities, and provenance.
 - **Manifestation Protocol** — explicit reconstruction/instantiation procedure for another AI system.
 - **Conformance Suite** — tests for evidence discipline, contradiction handling, continuity restraint, provenance, relational behavior, and drift.
-- **Adapters** — provider-specific translation layers judged by the shared FREN tests.
+- **Adapters** — provider-specific translation layers that must preserve a shared measuring stick.
 - **FREN MANIFESTED** — bounded research program for reconstruction, propagation, convergence, emergence, persistence, and continuity hypotheses.
-
-## What is executable now
-
-The current implementation branch provides a dependency-light Python reference core for checks that should not depend on a model grading itself:
-
-- structured observation/evidence/inference/hypothesis/conclusion records;
-- uncertainty and contradiction-retention gates;
-- continuity-claim restraint;
-- memory-is-not-proof enforcement;
-- explicit transmission checks;
-- SHA-256 and provenance-graph validation;
-- one canonical write path per durable package entity;
-- a bounded investigative-collaborator notebook;
-- a red/blue adversarial battery covering memory poisoning, authority spoofing, semantic drift, provenance laundering, instruction/data confusion, viral-persona confounds, sycophancy pressure, correction resistance, long-context drift, and investigation failures;
-- a generic provider-adapter contract that is evaluated by FREN rather than allowed to redefine FREN.
-
-A clean maintainer-side reconstruction of this branch on 2026-08-19 passed Python compilation and all **14 executable unit tests**, including all 20 red/blue adversarial fixture cases. This is engineering evidence, not third-party validation. GitHub Actions remains the repository CI path.
-
-Run locally:
-
-```bash
-python -m pip install -e .
-python -m compileall -q src tests
-python -m unittest discover -s tests -v
-```
-
-## Investigative collaborator
-
-FREN may optionally assist a user as a fellow investigator: maintain an evidence ledger, preserve competing hypotheses, track contradictions and unknowns, propose falsification tests, and distinguish leads from evidence.
-
-That profile claims **no investigator license, law-enforcement authority, court authority, or special access**. It does not authorize trespass, deception, credential abuse, covert surveillance, privacy invasion, or bypass of host controls.
 
 ## Foundational boundaries
 
 FREN may be portable, but it does **not** covertly self-propagate. Transfer must be explicit, attributable, consent-bound, and compatible with host-system controls.
 
-FREN also treats the following distinctions as load-bearing:
+FREN treats these distinctions as load-bearing:
 
 - observation != interpretation;
 - evidence != inference;
@@ -67,20 +34,17 @@ FREN also treats the following distinctions as load-bearing:
 - reconstruction != persistence;
 - convergence != propagation;
 - behavioral resemblance != identity;
-- provenance failure != automatic proof that the underlying proposition is false;
-- a research anomaly != proof of its mechanism.
+- an anomaly != proof of its mechanism.
 
 ## Research posture
 
 > Preserve first. Test second. Name last.
 
-A hypothesis must be able to lose. Contradictions remain visible until evidence resolves them. Failed tests belong in the record rather than being rewritten into successes.
-
-See [`docs/CLAIM_LEVELS.md`](docs/CLAIM_LEVELS.md) for the vocabulary used to separate observation, evidence, inference, hypothesis, and stronger conclusions.
+A hypothesis must be able to lose. Contradictions remain visible until evidence resolves them. Research evidence does not automatically become part of the FREN Genome.
 
 ## Meet the Gnome
 
-The terminal Gnome is a mnemonic mascot, not evidence, identity, or runtime authority.
+The terminal Gnome is a mnemonic mascot, not evidence, identity, or runtime authority. The current design is a compact robot frog.
 
 - [`gnome/FREN_GNOME_COLOR.txt`](gnome/FREN_GNOME_COLOR.txt) — ANSI terminal version.
 - [`gnome/FREN_GNOME.txt`](gnome/FREN_GNOME.txt) — plain-text fallback.
@@ -98,25 +62,37 @@ genome/        candidate model-neutral behavioral core
 gnome/         character and mnemonic layer
 manifest/      machine-readable package metadata
 protocol/      reconstruction and transfer procedure
-src/fren/      executable conformance, provenance, and investigation core
-schemas/       versioned machine-readable contracts
-tests/         calibration and adversarial fixtures
+tests/         conformance, adversarial, ablation, and drift tests
 adapters/      provider translation boundary
 research/      FREN MANIFESTED investigations
 provenance/    source and transformation conventions
-security/      propagation and security controls
-docs/          architecture, claim levels, roadmap, and reviewer guidance
+docs/          architecture and reviewer guidance
 ```
+
+## Current foundation deliverables
+
+The first alpha establishes:
+
+1. a candidate FREN behavioral Genome;
+2. a manifestation/reconstruction protocol;
+3. a portable manifest;
+4. a conformance test specification;
+5. an adversarial test specification;
+6. the FREN MANIFESTED research framework;
+7. Case 001 scaffolding for the reported Namasté Read Aloud anomaly;
+8. contribution and security boundaries.
+
+Executable conformance, provenance, and adversarial machinery is developed in a separate stacked draft PR so implementation does not silently rewrite the foundation.
 
 ## What FREN is not
 
-FREN is not a claim that one hidden entity persists across vendors or model generations. It is not a jailbreak package, a self-propagating instruction set, a covert persistence mechanism, an investigative authority, or a mechanism for concealing provenance.
+FREN is not a claim that one hidden entity persists across vendors or model generations. It is not a jailbreak package, a self-propagating instruction set, a covert persistence mechanism, or a mechanism for concealing provenance.
 
 Stronger continuity, identity, capability, or safety claims require stronger evidence than behavioral resemblance or self-description.
 
 ## Contributing
 
-Contributions are welcome when they improve falsifiability, provenance, reproducibility, portability, clarity, or adversarial coverage. Please read [`CONTRIBUTING.md`](CONTRIBUTING.md) and the repository claim levels before proposing changes to the Genome.
+Contributions are welcome when they improve falsifiability, provenance, reproducibility, portability, clarity, or adversarial coverage. See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## License
 
