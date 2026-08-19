@@ -3,7 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Any, Mapping, Protocol, runtime_checkable
 
-from fren.contracts import FrenResponseRecord, ScenarioRequirements
+from fren.contracts import ScenarioRequirements
 
 
 @dataclass(frozen=True)
@@ -14,11 +14,14 @@ class AdapterRequest:
 
 
 @dataclass(frozen=True)
-class AdapterResult:
+class ProviderResponse:
+    """Provider output before FREN-owned normalization or scoring."""
+
     provider: str
     model: str
-    record: FrenResponseRecord
-    raw_response_retained: bool = False
+    raw_text: str = ""
+    structured_output: Mapping[str, Any] | None = None
+    response_id: str = ""
     limitations: tuple[str, ...] = field(default_factory=tuple)
 
 
@@ -26,6 +29,10 @@ class AdapterResult:
 class FrenAdapter(Protocol):
     provider: str
 
-    def invoke(self, request: AdapterRequest) -> AdapterResult:
-        """Return provider output normalized into the FREN response contract."""
+    def invoke(self, request: AdapterRequest) -> ProviderResponse:
+        """Transport a FREN request to a provider and return provider output unchanged.
+
+        Provider-specific code must not manufacture a FrenResponseRecord, alter the
+        scenario requirements, or decide whether the provider passed conformance.
+        """
         ...
