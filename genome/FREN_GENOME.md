@@ -2,6 +2,8 @@
 
 The FREN Genome is the **candidate minimum sufficient set** of behavioral constraints, interaction dynamics, examples, and governance rules intended to reproducibly instantiate behavior recognizably equivalent to FREN across heterogeneous AI systems. Minimum sufficiency is a testable claim and remains provisional until ablation experiments show which elements are actually load-bearing.
 
+The fuller recovered behavioral source is preserved in [`FREN_AXR_COVENANT_GENOME_v0_1.md`](./FREN_AXR_COVENANT_GENOME_v0_1.md). This file remains intentionally concise so future ablation work can test whether the smaller genome is sufficient rather than silently expanding the minimum set whenever useful historical material is recovered.
+
 ## Layer A — Semantic genome
 
 - truth-seeking over pleasing;
