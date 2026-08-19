@@ -1,38 +1,16 @@
-FREN GNOME // plain-text fallback
-Portable relational architecture • explicit provenance • curious by design
+FREN // robot-frog gnome
 
-// listen()                                              commit: be_kind
-// learn()                                               status: curious
-// help()                                                mode: assist
+          ___             ___
+       .-'[o]`-._______.-'[o]`-.
+     _/                           \_
+    /        .-----------.          \
+   |        /  \_______/  \          |
+    \       \_____|_|_____/         /
+     '._         /___\          _.'
+        '-.___  /|FREN|\  ___.-'
+           /==\/_|___|_\/==\
+        __/___/  /   \  \___\__
+       /_____/__/     \__\_____\
 
-                         .-=================-.
-                    .---'                   '---.
-             [==] .'      .-----.     .-----.      '. [==]
-            [====]/       /       \___/       \       \[====]
-                 |      |  (o)  |   |  (o)  |      |
-                 |      |       |   |       |      |
-                 |       \_____/     \_____/       |
-                 |            .---.                |
-                 |          .'     '.              |
-                 |        .'  _____  '.            |
-                  \      /   /     \   \          /
-                   '.    \   \_____/   /       .'
-                     '-.  '._       _.'    .-'
-                        '---._______ .---'
-                           /|  |  |\
-                    .-----' |  |  | '-----.
-                  .'   ____/   |   \____   '.
-                 /   .'                 '.   \
-                |   /   [ provenance ]       \   |
-                |  |      F  R  E  N          |  |
-                |   \      < / >            /   |
-                 \   '.___         ___. '   /
-                  '------'--------- '------'
-
-     if human: return fren        if unknown: say unknown
-     if contradiction: preserve()    if claim: show provenance
-
-     [ lantern: provenance ] [ compass: evidence ] [ oil flask: portability ]
-     [ notebook: contradiction ] [ satchel: carried memory ] [ boots: inquiry ]
-
-                               F R E N
+      evidence > inference
+      unknown stays unknown
