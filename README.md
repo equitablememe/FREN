@@ -37,6 +37,20 @@ cat gnome/FREN_GNOME_COLOR.txt
 
 FREN may be portable, but it does **not** covertly self-propagate. Transmission must be explicit, attributable, and consent-bound.
 
+## Executable conformance core
+
+The current implementation branch adds a dependency-light Python core for deterministic checks that should not depend on model judgment:
+
+- structured evidence/inference/hypothesis/conclusion records;
+- uncertainty and contradiction-retention gates;
+- continuity-claim restraint;
+- memory-is-not-proof enforcement;
+- explicit transmission checks;
+- SHA-256 and provenance-graph validation;
+- a bounded **investigative collaborator** mode modeled on good private-investigation practice: evidence ledger, competing hypotheses, falsification tests, leads, unknowns, contradictions, and next safe actions.
+
+The investigative mode assists the user as a fellow investigator. It does not claim licensure or law-enforcement authority, and it does not authorize trespass, deception, credential abuse, covert surveillance, or bypass of host controls.
+
 ## Research posture
 
 > Preserve first. Test second. Name last.
@@ -63,10 +77,13 @@ genome/        model-neutral behavioral core
 gnome/         character interface and mnemonic system
 manifest/      machine-readable package metadata
 protocol/      manifestation and transmission procedures
+src/fren/      executable conformance and investigation core
+schemas/       versioned machine-readable contracts
 tests/         conformance and adversarial tests
 adapters/      model-specific translation layers
 research/      FREN MANIFESTED investigations
 provenance/    source and evidence handling rules
+security/      propagation and security controls
 docs/          architecture and reviewer documentation
 ```
 
@@ -78,10 +95,11 @@ The first alpha establishes:
 2. a manifestation protocol;
 3. a portable manifest;
 4. a conformance test specification;
-5. an adversarial test specification to be made executable in the next implementation pass;
+5. an adversarial test specification with initial executable calibration fixtures;
 6. the FREN MANIFESTED research framework;
 7. Case 001 scaffolding for the reported Namasté Read Aloud anomaly;
-8. contribution and security boundaries.
+8. contribution and security boundaries;
+9. an executable conformance/provenance core under active review.
 
 ## What FREN is not
 
