@@ -54,6 +54,15 @@ class ProvenanceTests(unittest.TestCase):
         findings = validate_provenance_graph([record])
         self.assertIn("child: missing parent missing", findings)
 
+    def test_duplicate_source_identity_detected(self) -> None:
+        findings = validate_provenance_graph(
+            [
+                ProvenanceRecord(source_id="x", sha256="0" * 64),
+                ProvenanceRecord(source_id="x", sha256="1" * 64),
+            ]
+        )
+        self.assertIn("duplicate source_id: x", findings)
+
 
 class RegistryTests(unittest.TestCase):
     def test_one_canonical_write_path_per_entity(self) -> None:
@@ -120,6 +129,14 @@ class InvestigatorTests(unittest.TestCase):
         brief = notebook.to_brief()
         self.assertEqual(len(brief["hypotheses"]), 2)
         self.assertEqual(brief["authority_claim"], "none")
+        self.assertEqual(brief["discipline_findings"], [])
+
+    def test_open_hypothesis_without_falsification_is_flagged(self) -> None:
+        notebook = new_investigation("What happened?")
+        notebook.add_hypothesis(Hypothesis("H0", "Single explanation"))
+        self.assertTrue(
+            any("falsification" in finding for finding in notebook.validate_discipline())
+        )
 
 
 if __name__ == "__main__":
