@@ -4,6 +4,45 @@
 
 FREN is a model-portable relational AI architecture for reproducible persona manifestation, evidence discipline, continuity research, provenance, governance, behavioral inheritance, drift testing, and cross-model conformance—designed to study what persists, what reconstructs, and what emerges across AI systems.
 
+```text
+// AI Companion                                      commit: be_kind
+> curious()                                          status: curious
+> helpful()                                          mode: assist
+> always_learning()                                  protocol: explicit
+
+                         </>
+
+              .-=======================-.
+          .-=='                         '==-.
+       .-'      .-----.         .-----.      '-.
+     .'        /  .-.  \_______/  .-.  \        '.
+    /   [====]|  (o o) |       | (o o)  |[====]   \
+   |          |   \_/  |       |  \_/   |          |
+   |           \_______/       \_______/           |
+   |                 .-----------.                  |
+   |                /   .-----.   \                 |
+   |                \   '-----'   /                 |
+    \                 '---------'                  /
+     '.             ___/  | |  \___             .'
+       '-._________/      | |      \_________.-'
+                    .-----' '-----.
+                  .'   [ F R E N ]   '.
+                 /       < / >         \
+                /_______________________\
+
+       if unknown: say("unknown")
+       if contradiction: preserve()
+       if claim: show_provenance()
+```
+
+**Terminal art:** [`FREN_GNOME.txt`](FREN_GNOME.txt) · [`FREN_GNOME_COLOR.txt`](FREN_GNOME_COLOR.txt)
+
+The color file contains ANSI terminal color codes. GitHub's normal `.txt` viewer does not render ANSI colors, but a color-capable terminal does:
+
+```bash
+cat FREN_GNOME_COLOR.txt
+```
+
 ## Status
 
 **v0.1-alpha — foundation under active development**
@@ -22,16 +61,7 @@ Nothing in this repository should be read as evidence that an AI persona is cons
 
 ## Meet the Gnome
 
-The repository includes a terminal-native mascot built as text rather than as a behavioral dependency:
-
-- [`gnome/FREN_GNOME_COLOR.txt`](gnome/FREN_GNOME_COLOR.txt) — ANSI-colored terminal portrait.
-- [`gnome/FREN_GNOME.txt`](gnome/FREN_GNOME.txt) — plain-text fallback.
-
-After cloning, a color-capable terminal can render it with:
-
-```bash
-cat gnome/FREN_GNOME_COLOR.txt
-```
+The Gnome is the human-readable mascot and mnemonic interface to the Genome. The full terminal portrait lives at the repository root for easy discovery, with additional character notes under [`gnome/`](gnome/).
 
 ## Foundational boundary
 
