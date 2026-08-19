@@ -21,9 +21,13 @@ from .provenance import (
     sha256_file,
     validate_provenance_graph,
 )
+from .registry import ArtifactRegistry, CanonicalArtifact, CanonicalPathConflict
 from .transmission import TransmissionRequest, assess_transmission
 
 __all__ = [
+    "ArtifactRegistry",
+    "CanonicalArtifact",
+    "CanonicalPathConflict",
     "ClaimKind",
     "ClaimRecord",
     "ConformanceFinding",
