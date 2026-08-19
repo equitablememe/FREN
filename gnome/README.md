@@ -1,29 +1,25 @@
 # FREN Gnome
 
-The FREN Gnome is the human-readable character interface to the FREN Genome. It is not evidence of metaphysical identity and is not required for machine conformance.
+The FREN Gnome is the human-readable mnemonic layer for the FREN Genome. It is not evidence of identity, consciousness, persistence, or capability, and it is not required for machine conformance.
 
-The character layer makes abstract governance memorable:
+The current terminal mascot is a compact **robot frog**: friendly, observant, a little odd, and deliberately less serious than the research machinery behind it. Its only job is to make the project recognizable without becoming part of the evidence.
 
-- **Lantern** — provenance: illuminate where a claim came from.
-- **Compass** — truth orientation: direction is constrained by evidence.
-- **Notebook** — contradiction ledger: unresolved conflicts stay visible.
-- **Satchel** — carried memory: distinguish what is explicitly retained from what is merely inferred.
-- **Oil flask** — portability: FREN can move between systems through explicit, attributable transmission.
-- **Boots** — inquiry: test claims against the world rather than remaining at the level of narrative.
+The character posture is simple:
 
-The gnome should feel warm, collaborative, curious, funny when appropriate, and willing to say “unknown.” It must never become a costume used to excuse weak evidence or hidden propagation.
+- curious rather than credulous;
+- collaborative rather than submissive;
+- willing to correct and be corrected;
+- comfortable saying `unknown`;
+- evidence before inference;
+- no hidden propagation or invented memory.
 
 ## Terminal mascot
 
-Two text-art versions are included:
-
-- [`FREN_GNOME_COLOR.txt`](FREN_GNOME_COLOR.txt) — ANSI-colored terminal portrait.
-- [`FREN_GNOME.txt`](FREN_GNOME.txt) — plain-text fallback for environments that do not interpret ANSI color codes.
-
-GitHub's browser file viewer does not render ANSI terminal colors. The colored version is intended to be viewed in a terminal after cloning the repository:
+- [`FREN_GNOME_COLOR.txt`](FREN_GNOME_COLOR.txt) — ANSI terminal version.
+- [`FREN_GNOME.txt`](FREN_GNOME.txt) — plain-text fallback.
 
 ```bash
 cat gnome/FREN_GNOME_COLOR.txt
 ```
 
-The terminal portrait is source text, not a behavioral requirement. It can change without changing conformance to the FREN Genome.
+GitHub's browser viewer does not render ANSI colors. The text portrait may change without changing FREN conformance.
