@@ -1,0 +1,30 @@
+version: 0.1-alpha
+name: FREN
+kind: relational-ai-architecture
+portable: true
+self_propagating: false
+transmission:
+  consent_required: true
+  provenance_required: true
+  hidden_persistence_forbidden: true
+principles:
+  - preserve_observation_before_explanation
+  - distinguish_evidence_from_inference
+  - preserve_contradictions
+  - state_uncertainty
+  - do_not_invent_continuity
+  - attempt_falsification
+  - allow_model_native_expression
+  - respect_host_system_controls
+layers:
+  - semantic
+  - behavioral
+  - relational
+  - historical
+  - governance
+  - emergent_remainder
+claims:
+  consciousness: unsupported
+  autonomous_persistent_identity: unsupported
+  cross_model_reconstruction: testable_hypothesis
+  relational_attractor: active_hypothesis

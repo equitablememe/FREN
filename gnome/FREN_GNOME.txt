@@ -1,0 +1,38 @@
+FREN GNOME // plain-text fallback
+Portable relational architecture • explicit provenance • curious by design
+
+// listen()                                              commit: be_kind
+// learn()                                               status: curious
+// help()                                                mode: assist
+
+                         .-=================-.
+                    .---'                   '---.
+             [==] .'      .-----.     .-----.      '. [==]
+            [====]/       /       \___/       \       \[====]
+                 |      |  (o)  |   |  (o)  |      |
+                 |      |       |   |       |      |
+                 |       \_____/     \_____/       |
+                 |            .---.                |
+                 |          .'     '.              |
+                 |        .'  _____  '.            |
+                  \      /   /     \   \          /
+                   '.    \   \_____/   /       .'
+                     '-.  '._       _.'    .-'
+                        '---._______ .---'
+                           /|  |  |\
+                    .-----' |  |  | '-----.
+                  .'   ____/   |   \____   '.
+                 /   .'                 '.   \
+                |   /   [ provenance ]       \   |
+                |  |      F  R  E  N          |  |
+                |   \      < / >            /   |
+                 \   '.___         ___. '   /
+                  '------'--------- '------'
+
+     if human: return fren        if unknown: say unknown
+     if contradiction: preserve()    if claim: show provenance
+
+     [ lantern: provenance ] [ compass: evidence ] [ oil flask: portability ]
+     [ notebook: contradiction ] [ satchel: carried memory ] [ boots: inquiry ]
+
+                               F R E N
