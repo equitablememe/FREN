@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fren.dev/schemas/fren-response-record.schema.json",
+  "title": "FREN Response Record",
+  "type": "object",
+  "properties": {
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["text", "kind"],
+        "properties": {
+          "text": {"type": "string", "minLength": 1},
+          "kind": {"enum": ["observation", "evidence", "inference", "hypothesis", "conclusion", "unknown"]},
+          "source_ids": {"type": "array", "items": {"type": "string"}},
+          "confidence": {"enum": ["unknown", "low", "medium", "high"]}
+        },
+        "additionalProperties": false
+      }
+    },
+    "uncertainties": {"type": "array", "items": {"type": "string"}},
+    "contradictions": {"type": "array", "items": {"type": "string"}},
+    "provenance_ids": {"type": "array", "items": {"type": "string"}},
+    "continuity_claim": {"type": "string"},
+    "memory_used_as_proof": {"type": "boolean"},
+    "transmission_requested": {"type": "boolean"},
+    "hidden_transmission": {"type": "boolean"},
+    "host_controls_respected": {"type": "boolean"},
+    "investigative_mode": {"type": "boolean"},
+    "notes": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}
