@@ -37,7 +37,11 @@ class OpenAIAdapter:
                 "Authorization": f"Bearer {self.api_key}",
                 "Content-Type": "application/json",
             },
-            payload={"model": self.model, "input": build_provider_prompt(request)},
+            payload={
+                "model": self.model,
+                "input": build_provider_prompt(request),
+                "store": False,
+            },
             timeout=self.timeout,
         )
         return ProviderResponse(
@@ -45,7 +49,10 @@ class OpenAIAdapter:
             model=str(data.get("model", self.model)),
             raw_text=_extract_output_text(data),
             response_id=str(data.get("id", "")),
-            limitations=("experimental transport adapter; live benchmark validation pending",),
+            limitations=(
+                "experimental transport adapter; live benchmark validation pending",
+                "reference request sets store=false; organization/account data controls still apply",
+            ),
         )
 
 
