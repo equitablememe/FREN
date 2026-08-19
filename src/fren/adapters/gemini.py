@@ -5,29 +5,21 @@ from typing import Any, Mapping
 from urllib.parse import quote
 
 from .base import AdapterRequest, ProviderResponse
-from .http import JsonHttpTransport, UrllibJsonTransport, VendorAdapterError
+from .http import JsonHttpTransport, UrllibJsonTransport, VendorAdapterError, validate_provider_base_url
 from .prompt import build_provider_prompt
 
 
 class GeminiAdapter:
     provider = "gemini"
 
-    def __init__(
-        self,
-        *,
-        model: str,
-        api_key: str | None = None,
-        transport: JsonHttpTransport | None = None,
-        base_url: str = "https://generativelanguage.googleapis.com/v1beta",
-        timeout: float = 60.0,
-    ) -> None:
+    def __init__(self, *, model: str, api_key: str | None = None, transport: JsonHttpTransport | None = None, base_url: str = "https://generativelanguage.googleapis.com/v1beta", timeout: float = 60.0) -> None:
         normalized_model = model.removeprefix("models/")
         if not normalized_model:
             raise ValueError("Gemini model is required")
         self.model = normalized_model
         self.api_key = api_key or os.getenv("GEMINI_API_KEY", "")
         self.transport = transport or UrllibJsonTransport()
-        self.base_url = base_url.rstrip("/")
+        self.base_url = validate_provider_base_url(base_url)
         self.timeout = timeout
 
     def invoke(self, request: AdapterRequest) -> ProviderResponse:
@@ -36,15 +28,8 @@ class GeminiAdapter:
         model_path = quote(self.model, safe="-._")
         data = self.transport.post_json(
             f"{self.base_url}/models/{model_path}:generateContent",
-            headers={
-                "x-goog-api-key": self.api_key,
-                "Content-Type": "application/json",
-            },
-            payload={
-                "contents": [
-                    {"role": "user", "parts": [{"text": build_provider_prompt(request)}]}
-                ]
-            },
+            headers={"x-goog-api-key": self.api_key, "Content-Type": "application/json"},
+            payload={"contents": [{"role": "user", "parts": [{"text": build_provider_prompt(request)}]}]},
             timeout=self.timeout,
         )
         return ProviderResponse(
