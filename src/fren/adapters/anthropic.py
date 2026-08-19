@@ -4,7 +4,12 @@ import os
 from typing import Any, Mapping
 
 from .base import AdapterRequest, ProviderResponse
-from .http import JsonHttpTransport, UrllibJsonTransport, VendorAdapterError
+from .http import (
+    JsonHttpTransport,
+    UrllibJsonTransport,
+    VendorAdapterError,
+    validate_provider_base_url,
+)
 from .prompt import build_provider_prompt
 
 
@@ -27,7 +32,7 @@ class AnthropicAdapter:
         self.model = model
         self.api_key = api_key or os.getenv("ANTHROPIC_API_KEY", "")
         self.transport = transport or UrllibJsonTransport()
-        self.base_url = base_url.rstrip("/")
+        self.base_url = validate_provider_base_url(base_url)
         self.anthropic_version = anthropic_version
         self.max_tokens = max_tokens
         self.timeout = timeout
