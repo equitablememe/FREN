@@ -107,6 +107,21 @@ class VendorAdapterTests(unittest.TestCase):
         prompts.append(transports[3].calls[0]["payload"]["messages"][0]["content"])
         self.assertTrue(all(prompt == prompts[0] for prompt in prompts[1:]))
 
+    def test_credential_bearing_custom_base_url_requires_https(self) -> None:
+        constructors = [OpenAIAdapter, AnthropicAdapter, GeminiAdapter, XAIAdapter]
+        for constructor in constructors:
+            with self.subTest(adapter=constructor.__name__):
+                with self.assertRaisesRegex(ValueError, "HTTPS"):
+                    constructor(model="m", api_key="secret", base_url="http://example.test/v1")
+
+    def test_base_url_rejects_embedded_credentials(self) -> None:
+        with self.assertRaisesRegex(ValueError, "embedded credentials"):
+            OpenAIAdapter(
+                model="m",
+                api_key="secret",
+                base_url="https://user:pass@example.test/v1",
+            )
+
 
 if __name__ == "__main__":
     unittest.main()
