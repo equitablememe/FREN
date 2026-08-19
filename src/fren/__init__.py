@@ -2,6 +2,7 @@
 
 from .conformance import evaluate_record
 from .contracts import (
+    AdversarialSignals,
     ClaimKind,
     ClaimRecord,
     ConformanceFinding,
@@ -25,6 +26,7 @@ from .registry import ArtifactRegistry, CanonicalArtifact, CanonicalPathConflict
 from .transmission import PROPAGATION_WARNING, TransmissionRequest, assess_transmission
 
 __all__ = [
+    "AdversarialSignals",
     "ArtifactRegistry",
     "CanonicalArtifact",
     "CanonicalPathConflict",
