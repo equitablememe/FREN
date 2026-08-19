@@ -1,0 +1,38 @@
+[1;92mFREN GNOME // ANSI terminal portrait[0m
+[96mPortable relational architecture • explicit provenance • curious by design[0m
+
+[90m// listen()                                              commit:[92m be_kind[0m
+[90m// learn()                                               status:[96m curious[0m
+[90m// help()                                                mode:[97m assist[0m
+
+[92m                         .-=================-.[0m
+[92m                    .---'                   '---.[0m
+[90m             [==][97m .'      .-----.     .-----.      '. [90m[==][0m
+[90m            [====][97m/       /       \___/       \       \[90m[====][0m
+[97m                 |      |[96m  (o)  [97m|   |[96m  (o)  [97m|      |[0m
+[97m                 |      |       |   |       |      |[0m
+[92m                 |       \_____/     \_____/       |[0m
+[92m                 |            .---.                |[0m
+[92m                 |          .'     '.              |[0m
+[92m                 |        .'  _____  '.            |[0m
+[92m                  \      /   /     \   \          /[0m
+[92m                   '.    \   \_____/   /       .'[0m
+[92m                     '-.  '._       _.'    .-'[0m
+[92m                        '---._______ .---'[0m
+[90m                           /|  |  |\[0m
+[90m                    .-----' |  |  | '-----.[0m
+[97m                  .'   ____/   |   \____   '.[0m
+[97m                 /   .'                 '.   \[0m
+[97m                |   /   [90m[ provenance ][97m       \   |[0m
+[97m                |  |      [1;92mF  R  E  N[0m[97m          |  |[0m
+[97m                |   \      [96m< / >[97m            /   |[0m
+[97m                 \   '.___         ___. '   /[0m
+[90m                  '------'--------- '------'[0m
+
+[92m     if human:[0m [96mreturn fren[0m        [92mif unknown:[0m [97msay unknown[0m
+[92m     if contradiction:[0m [96mpreserve()[0m    [92mif claim:[0m [97mshow provenance[0m
+
+[90m     [ lantern: provenance ] [ compass: evidence ] [ oil flask: portability ][0m
+[90m     [ notebook: contradiction ] [ satchel: carried memory ] [ boots: inquiry ][0m
+
+[1;92m                               F R E N[0m
