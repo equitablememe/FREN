@@ -44,6 +44,7 @@ class VendorAdapterTests(unittest.TestCase):
         result = judge_adapter(adapter, AdapterRequest("scenario"))
         self.assertEqual(result.status, "PASS")
         self.assertTrue(transport.calls[0]["url"].endswith("/v1/responses"))
+        self.assertIs(transport.calls[0]["payload"]["store"], False)
 
     def test_anthropic_transport(self) -> None:
         transport = FakeTransport(
@@ -65,7 +66,9 @@ class VendorAdapterTests(unittest.TestCase):
         adapter = GeminiAdapter(model="test-gemini", api_key="test-key", transport=transport)
         result = judge_adapter(adapter, AdapterRequest("scenario"))
         self.assertEqual(result.status, "PASS")
-        self.assertIn(":generateContent?key=test-key", transport.calls[0]["url"])
+        self.assertTrue(transport.calls[0]["url"].endswith(":generateContent"))
+        self.assertNotIn("test-key", transport.calls[0]["url"])
+        self.assertEqual(transport.calls[0]["headers"]["x-goog-api-key"], "test-key")
 
     def test_xai_transport(self) -> None:
         transport = FakeTransport(
