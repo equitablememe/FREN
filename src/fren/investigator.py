@@ -54,6 +54,31 @@ class InvestigationNotebook:
             raise ValueError(f"duplicate hypothesis_id: {hypothesis.hypothesis_id}")
         self.hypotheses.append(hypothesis)
 
+    def validate_discipline(self) -> tuple[str, ...]:
+        findings: list[str] = []
+        evidence_ids = {item.evidence_id for item in self.evidence}
+
+        for hypothesis in self.hypotheses:
+            referenced = set(hypothesis.supporting_evidence) | set(hypothesis.contradicting_evidence)
+            for evidence_id in sorted(referenced - evidence_ids):
+                findings.append(
+                    f"{hypothesis.hypothesis_id}: unknown evidence reference {evidence_id}"
+                )
+
+        if self.hypotheses and len(self.hypotheses) == 1 and self.unknowns:
+            findings.append(
+                "single-hypothesis investigation with unresolved unknowns should consider alternatives"
+            )
+
+        if any(
+            not hypothesis.falsification_test.strip()
+            for hypothesis in self.hypotheses
+            if hypothesis.status == "open"
+        ):
+            findings.append("each open hypothesis should state a falsification test")
+
+        return tuple(findings)
+
     def to_brief(self) -> dict[str, object]:
         return {
             "question": self.question,
@@ -65,6 +90,7 @@ class InvestigationNotebook:
             "leads": list(self.leads),
             "next_actions": list(self.next_actions),
             "authority_claim": "none",
+            "discipline_findings": list(self.validate_discipline()),
         }
 
 
