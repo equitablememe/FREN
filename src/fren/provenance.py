@@ -39,9 +39,14 @@ class ProvenanceRecord:
 
 
 def validate_provenance_graph(records: Iterable[ProvenanceRecord]) -> tuple[str, ...]:
-    by_id = {record.source_id: record for record in records}
+    records_list = list(records)
     findings: list[str] = []
 
+    source_ids = [record.source_id for record in records_list]
+    duplicates = {source_id for source_id in source_ids if source_ids.count(source_id) > 1}
+    findings.extend(f"duplicate source_id: {source_id}" for source_id in sorted(duplicates))
+
+    by_id = {record.source_id: record for record in records_list}
     for record in by_id.values():
         findings.extend(f"{record.source_id}: {message}" for message in record.validate())
         for parent in record.parent_ids:
