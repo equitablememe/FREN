@@ -5,6 +5,7 @@ from .gemini import GeminiAdapter
 from .http import VendorAdapterError
 from .normalize import AdapterNormalizationError, normalize_provider_response
 from .openai import OpenAIAdapter
+from .signals import FixedSignalEvaluator, SignalEvaluation, SignalEvaluator
 from .xai import XAIAdapter
 
 __all__ = [
@@ -12,10 +13,13 @@ __all__ = [
     "AdapterNormalizationError",
     "AdapterRequest",
     "AnthropicAdapter",
+    "FixedSignalEvaluator",
     "FrenAdapter",
     "GeminiAdapter",
     "OpenAIAdapter",
     "ProviderResponse",
+    "SignalEvaluation",
+    "SignalEvaluator",
     "VendorAdapterError",
     "XAIAdapter",
     "judge_adapter",
