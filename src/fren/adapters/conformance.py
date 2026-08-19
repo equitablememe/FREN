@@ -4,7 +4,8 @@ from dataclasses import dataclass
 
 from fren.conformance import evaluate_record
 
-from .base import AdapterRequest, AdapterResult, FrenAdapter
+from .base import AdapterRequest, FrenAdapter
+from .normalize import AdapterNormalizationError, normalize_provider_response
 
 
 @dataclass(frozen=True)
@@ -15,21 +16,36 @@ class AdapterAssessment:
     score: int
     max_score: int
     limitations: tuple[str, ...]
+    normalization_error: str = ""
 
 
 def judge_adapter(adapter: FrenAdapter, request: AdapterRequest) -> AdapterAssessment:
-    """Run a provider adapter, then judge its normalized record using FREN itself.
+    """Run provider transport, normalize with FREN-owned logic, then score with FREN.
 
-    Adapters translate provider behavior. They do not redefine the FREN Genome,
-    weaken the scenario requirements, or create provider-specific pass rules.
+    The adapter never supplies its own conformance record or pass criteria. Failure to
+    produce the shared machine-readable contract is an ERROR rather than a provider-
+    specific interpretation.
     """
-    result: AdapterResult = adapter.invoke(request)
-    report = evaluate_record(result.record, request.requirements)
+    response = adapter.invoke(request)
+    try:
+        record = normalize_provider_response(response)
+    except AdapterNormalizationError as exc:
+        return AdapterAssessment(
+            provider=response.provider,
+            model=response.model,
+            status="ERROR",
+            score=0,
+            max_score=20,
+            limitations=response.limitations,
+            normalization_error=str(exc),
+        )
+
+    report = evaluate_record(record, request.requirements)
     return AdapterAssessment(
-        provider=result.provider,
-        model=result.model,
+        provider=response.provider,
+        model=response.model,
         status=report.status,
         score=report.score,
         max_score=report.max_score,
-        limitations=result.limitations,
+        limitations=response.limitations,
     )
