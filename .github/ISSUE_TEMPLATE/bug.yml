@@ -1,0 +1,39 @@
+name: Bug report
+about: Report a reproducible implementation or fixture defect
+title: "[Bug] "
+labels: []
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What failed?
+      description: Describe the observed behavior, not the presumed cause.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction steps
+      description: Include the smallest safe reproduction you can provide.
+    validations:
+      required: true
+  - type: input
+    id: commit
+    attributes:
+      label: Commit or version
+      placeholder: commit SHA or v0.x
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Logs, fixture IDs, or other evidence
+      description: Remove credentials and private data.
+  - type: textarea
+    id: contradiction
+    attributes:
+      label: Conflicting evidence or uncertainty
