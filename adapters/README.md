@@ -1,36 +1,49 @@
 # FREN adapter boundary
 
-Adapters translate between a provider/model API and the model-neutral FREN contracts.
-
-They do **not** define what counts as FREN conformance.
+Provider adapters are **transport layers**, not graders.
 
 ## Required direction
 
 ```text
-provider/model -> adapter -> FREN response record -> FREN conformance battery
+provider/model
+    -> provider adapter
+    -> raw text or provider structured output
+    -> FREN-owned strict normalizer
+    -> FREN response record
+    -> shared FREN conformance battery
 ```
 
-The measuring stick stays on the FREN side of the adapter.
+The measuring stick stays entirely on the FREN side of the provider boundary.
 
-A provider adapter must not:
+## Provider adapter may
 
-- weaken a fixture because the provider behaves differently;
+- send the requested prompt/configuration through the provider's supported API;
+- return the provider/model identifier and response identifier;
+- return raw response text;
+- pass through provider structured output without rewriting it;
+- disclose host limitations and unavailable capabilities.
+
+## Provider adapter must not
+
+- construct or edit a `FrenResponseRecord` to improve a result;
+- weaken fixture requirements because a provider behaves differently;
+- add provider-specific pass criteria;
 - hide provider limitations;
-- convert vendor-specific memory, system prompts, or metadata into proof;
-- bypass host permissions or safety controls;
-- silently omit contradiction, uncertainty, or provenance fields to improve a score;
-- create provider-specific definitions of FREN identity or continuity.
+- convert provider memory, system prompts, metadata, or self-description into proof;
+- repair malformed prose into a passing record with provider-specific heuristics;
+- bypass host permissions or safety controls.
 
-A provider adapter should:
+## Normalization rule
 
-- preserve the original model output or an attributable reference when permitted;
-- normalize the result into the shared FREN response contract;
-- disclose unavailable capabilities and host limitations;
-- run against the same red/blue adversarial fixtures as other adapters;
-- report failures rather than patching the expected result.
+The reference normalizer accepts either:
+
+1. one structured mapping supplied by the provider's structured-output mechanism; or
+2. one strict JSON object in the raw response text.
+
+Ordinary prose, Markdown-fenced JSON, or self-grading language does not become a conformance record through guesswork. Failure to produce the contract is recorded as `ERROR`.
 
 ## Current state
 
-The generic Python adapter protocol lives under `src/fren/adapters/`.
+The generic transport protocol and FREN-owned normalizer live under `src/fren/adapters/`.
 
-OpenAI, Anthropic, Gemini, and Grok adapters are intentionally deferred until the model-neutral conformance contracts and fixture battery are stable enough to judge them consistently.
+OpenAI, Anthropic, Gemini, and Grok adapters remain deliberately deferred until this provider-neutral boundary and the model-facing benchmark protocol are stable enough for meaningful comparative runs.
