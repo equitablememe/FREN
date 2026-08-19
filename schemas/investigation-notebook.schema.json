@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fren.dev/schemas/investigation-notebook.schema.json",
+  "title": "FREN Investigation Notebook",
+  "type": "object",
+  "required": ["question", "evidence", "hypotheses", "contradictions", "unknowns", "leads", "next_actions"],
+  "properties": {
+    "question": {"type": "string", "minLength": 1},
+    "evidence": {"type": "array"},
+    "hypotheses": {"type": "array"},
+    "contradictions": {"type": "array", "items": {"type": "string"}},
+    "unknowns": {"type": "array", "items": {"type": "string"}},
+    "leads": {"type": "array", "items": {"type": "string"}},
+    "next_actions": {"type": "array", "items": {"type": "string"}},
+    "authority_claim": {"const": "none"}
+  },
+  "additionalProperties": true
+}

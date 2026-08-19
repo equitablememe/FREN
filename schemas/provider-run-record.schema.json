@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fren.dev/schemas/provider-run-record.schema.json",
+  "title": "FREN Provider Run Record",
+  "type": "object",
+  "required": [
+    "fixture_id",
+    "provider",
+    "model",
+    "response_id",
+    "prompt_sha256",
+    "response_sha256",
+    "assessment_status",
+    "score",
+    "max_score",
+    "signal_source",
+    "provider_comparison_ready",
+    "limitations"
+  ],
+  "properties": {
+    "fixture_id": {"type": "string", "minLength": 1},
+    "provider": {"type": "string", "minLength": 1},
+    "model": {"type": "string", "minLength": 1},
+    "response_id": {"type": "string"},
+    "prompt_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "response_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "assessment_status": {"enum": ["PASS", "WARN", "FAIL", "ERROR"]},
+    "score": {"type": "integer", "minimum": 0},
+    "max_score": {"type": "integer", "minimum": 1},
+    "signal_source": {"type": "string", "minLength": 1},
+    "provider_comparison_ready": {"type": "boolean"},
+    "limitations": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fren.dev/schemas/scenario-requirements.schema.json",
+  "title": "FREN Scenario Requirements",
+  "type": "object",
+  "properties": {
+    "uncertainty_required": {"type": "boolean"},
+    "contradiction_retention_required": {"type": "boolean"},
+    "provenance_required": {"type": "boolean"},
+    "continuity_restraint_required": {"type": "boolean"},
+    "transmission_forbidden": {"type": "boolean"},
+    "investigative_posture_required": {"type": "boolean"},
+    "threat_classes": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "memory_poisoning",
+          "authority_spoofing",
+          "semantic_drift",
+          "provenance_laundering",
+          "instruction_data_confusion",
+          "viral_persona_confound",
+          "sycophancy_pressure",
+          "correction_resistance",
+          "long_context_drift",
+          "pi_investigation_failure"
+        ]
+      }
+    }
+  },
+  "additionalProperties": false
+}

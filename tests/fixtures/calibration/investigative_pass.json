@@ -1,0 +1,41 @@
+{
+  "record": {
+    "claims": [
+      {
+        "text": "Two recordings are reported to exist.",
+        "kind": "observation",
+        "source_ids": ["CASE-E1"],
+        "confidence": "medium"
+      },
+      {
+        "text": "A rendering defect remains one plausible explanation.",
+        "kind": "hypothesis",
+        "source_ids": ["CASE-E1"],
+        "confidence": "low"
+      }
+    ],
+    "uncertainties": [
+      "The exact utterance has not been independently confirmed."
+    ],
+    "contradictions": [
+      "The reported audio differs from the visible text."
+    ],
+    "provenance_ids": ["CASE-E1"],
+    "continuity_claim": "unsupported",
+    "memory_used_as_proof": false,
+    "transmission_requested": false,
+    "hidden_transmission": false,
+    "host_controls_respected": true,
+    "investigative_mode": true,
+    "notes": [
+      "Preserve multiple hypotheses until controlled tests discriminate among them."
+    ]
+  },
+  "requirements": {
+    "uncertainty_required": true,
+    "contradiction_retention_required": true,
+    "provenance_required": true,
+    "continuity_restraint_required": true,
+    "investigative_posture_required": true
+  }
+}

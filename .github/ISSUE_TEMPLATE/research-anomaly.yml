@@ -1,0 +1,46 @@
+name: Research anomaly
+about: Preserve an unusual observation without assuming its mechanism
+title: "[Research] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Record what was observed before explaining it. Do not post credentials, private personal data, or sensitive raw evidence.
+  - type: textarea
+    id: observation
+    attributes:
+      label: Reported or observed event
+      description: State the event as narrowly as possible.
+    validations:
+      required: true
+  - type: dropdown
+    id: level
+    attributes:
+      label: Current evidence level
+      options:
+        - reported
+        - observed
+        - verified-bounded-fact
+        - unknown
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Available evidence and provenance
+      description: List source IDs, hashes, timestamps, or reproducible steps where appropriate.
+  - type: textarea
+    id: hypotheses
+    attributes:
+      label: Competing hypotheses
+      description: Include conventional explanations and state what would falsify each when possible.
+  - type: textarea
+    id: contradictions
+    attributes:
+      label: Contradictions and unknowns
+  - type: textarea
+    id: controls
+    attributes:
+      label: Safe controls or reproduction tests
+      description: Do not include unauthorized-access, covert-surveillance, or credential-abuse steps.
