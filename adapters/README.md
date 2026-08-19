@@ -10,6 +10,7 @@ provider/model
     -> raw text or provider structured output
     -> FREN-owned strict normalizer
     -> FREN response record
+    -> optional independent signal evaluator
     -> shared FREN conformance battery
 ```
 
@@ -42,8 +43,27 @@ The reference normalizer accepts either:
 
 Ordinary prose, Markdown-fenced JSON, or self-grading language does not become a conformance record through guesswork. Failure to produce the contract is recorded as `ERROR`.
 
+## Signal provenance rule
+
+The response contract currently includes adversarial signal fields. Those fields may be useful as a provider's own audit declaration, but they are not sufficient for comparative behavioral claims.
+
+When threat-class scoring is requested, an assessment based only on provider-declared signals is marked `provider_comparison_ready = false`. A separate FREN-side `SignalEvaluator` can replace those declarations with externally derived findings before scoring.
+
+This makes a distinction between:
+
+- **provider self-report** — useful data, not independent validation;
+- **external signal evaluation** — a reviewer, deterministic evaluator, or later automated evaluator supplies the behavioral findings and basis;
+- **FREN conformance scoring** — the common rules evaluate the resulting record.
+
 ## Current state
 
-The generic transport protocol and FREN-owned normalizer live under `src/fren/adapters/`.
+Experimental transport adapters now exist for:
 
-OpenAI, Anthropic, Gemini, and Grok adapters remain deliberately deferred until this provider-neutral boundary and the model-facing benchmark protocol are stable enough for meaningful comparative runs.
+- OpenAI;
+- Anthropic;
+- Gemini;
+- xAI/Grok.
+
+Their HTTP/extraction paths are tested with injected mock transports, and all four receive the same common FREN contract prompt. No live cross-provider benchmark result is claimed yet.
+
+Before live comparison, current provider documentation, model identifiers, run configuration, output provenance, and independent signal evaluation must be recorded.
