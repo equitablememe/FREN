@@ -2,7 +2,7 @@
 
 FREN distinguishes verification evidence from broader claims.
 
-## Current maintainer-side check
+## Maintainer-side clean check
 
 Date: 2026-08-19
 
@@ -15,8 +15,22 @@ PYTHONPATH=src python -m unittest discover -s tests -v
 
 Result: all 14 exercised unit tests passed, including the 20-case red/blue adversarial fixture battery and the generic adapter-contract test.
 
-This establishes a bounded engineering fact about the exercised code and fixtures. It does **not** establish independent third-party reproduction, cross-model conformance, production readiness, safety certification, or identity/continuity claims.
+## GitHub Actions
 
-## Repository CI
+Workflow: `FREN conformance`
 
-`.github/workflows/conformance.yml` defines Python 3.11, 3.12, and 3.13 checks. A workflow file existing is not itself evidence that a GitHub Actions run passed; use the repository's actual check result when making that claim.
+Observed successful run: **32281549750**
+
+The matrix completed successfully on:
+
+- Python 3.11;
+- Python 3.12;
+- Python 3.13.
+
+For each version, GitHub successfully completed package installation, `compileall`, and `python -m unittest discover -s tests -v`.
+
+Later commits in the same implementation pass changed documentation/front-door material rather than the tested Python conformance logic. A future release should still cite an exact release-head CI run rather than assuming an earlier green run transfers automatically.
+
+## Claim boundary
+
+These checks establish bounded engineering facts about the exercised code and fixtures. They do **not** establish independent third-party reproduction, cross-model conformance, production readiness, safety certification, or identity/continuity claims.
