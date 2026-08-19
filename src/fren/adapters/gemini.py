@@ -35,8 +35,11 @@ class GeminiAdapter:
             raise VendorAdapterError("GEMINI_API_KEY is required")
         model_path = quote(self.model, safe="-._")
         data = self.transport.post_json(
-            f"{self.base_url}/models/{model_path}:generateContent?key={self.api_key}",
-            headers={"Content-Type": "application/json"},
+            f"{self.base_url}/models/{model_path}:generateContent",
+            headers={
+                "x-goog-api-key": self.api_key,
+                "Content-Type": "application/json",
+            },
             payload={
                 "contents": [
                     {"role": "user", "parts": [{"text": build_provider_prompt(request)}]}
