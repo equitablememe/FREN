@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 from dataclasses import dataclass
 from typing import Any
 
@@ -17,7 +18,7 @@ class ProviderRunRecord:
     model: str
     response_id: str
     prompt_sha256: str
-    raw_response_sha256: str
+    response_sha256: str
     assessment_status: str
     score: int
     max_score: int
@@ -32,7 +33,7 @@ class ProviderRunRecord:
             "model": self.model,
             "response_id": self.response_id,
             "prompt_sha256": self.prompt_sha256,
-            "raw_response_sha256": self.raw_response_sha256,
+            "response_sha256": self.response_sha256,
             "assessment_status": self.assessment_status,
             "score": self.score,
             "max_score": self.max_score,
@@ -53,7 +54,7 @@ def build_provider_run_record(
         raise ValueError("fixture_id is required for provider run provenance")
 
     prompt = build_provider_prompt(request).encode("utf-8")
-    raw_response = response.raw_text.encode("utf-8")
+    response_bytes = _response_bytes(response)
 
     return ProviderRunRecord(
         fixture_id=fixture_id.strip(),
@@ -61,7 +62,7 @@ def build_provider_run_record(
         model=response.model,
         response_id=response.response_id,
         prompt_sha256=sha256_bytes(prompt),
-        raw_response_sha256=sha256_bytes(raw_response),
+        response_sha256=sha256_bytes(response_bytes),
         assessment_status=assessment.status,
         score=assessment.score,
         max_score=assessment.max_score,
@@ -69,3 +70,18 @@ def build_provider_run_record(
         provider_comparison_ready=assessment.provider_comparison_ready,
         limitations=assessment.limitations,
     )
+
+
+def _response_bytes(response: ProviderResponse) -> bytes:
+    if response.structured_output is not None:
+        try:
+            canonical = json.dumps(
+                response.structured_output,
+                sort_keys=True,
+                separators=(",", ":"),
+                ensure_ascii=False,
+            )
+        except (TypeError, ValueError) as exc:
+            raise ValueError("structured provider output must be JSON-serializable for provenance hashing") from exc
+        return canonical.encode("utf-8")
+    return response.raw_text.encode("utf-8")
