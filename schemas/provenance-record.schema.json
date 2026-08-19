@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fren.dev/schemas/provenance-record.schema.json",
+  "title": "FREN Provenance Record",
+  "type": "object",
+  "required": ["source_id", "sha256"],
+  "properties": {
+    "source_id": {"type": "string", "minLength": 1},
+    "sha256": {"type": "string", "pattern": "^[A-Fa-f0-9]{64}$"},
+    "source_uri": {"type": "string"},
+    "parent_ids": {"type": "array", "items": {"type": "string"}},
+    "transformations": {"type": "array", "items": {"type": "string"}},
+    "notes": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}
