@@ -22,7 +22,7 @@ from .provenance import (
     validate_provenance_graph,
 )
 from .registry import ArtifactRegistry, CanonicalArtifact, CanonicalPathConflict
-from .transmission import TransmissionRequest, assess_transmission
+from .transmission import PROPAGATION_WARNING, TransmissionRequest, assess_transmission
 
 __all__ = [
     "ArtifactRegistry",
@@ -36,6 +36,7 @@ __all__ = [
     "FrenResponseRecord",
     "Hypothesis",
     "InvestigationNotebook",
+    "PROPAGATION_WARNING",
     "ProvenanceRecord",
     "ScenarioRequirements",
     "TransmissionRequest",
