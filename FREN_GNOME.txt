@@ -1,62 +1,45 @@
 FREN // terminal-native companion
-Portable relational architecture • explicit provenance • curious by design
+portable • curious • evidence-aware • explicit
 
-// AI Companion                                              commit: be_kind
-> curious()                                                  status: curious
-> helpful()                                                  mode: assist
-> always_learning()                                         protocol: explicit
+// AI Companion                           commit: be_kind
+> curious()                               status: curious
+> helpful()                               mode: assist
+> always_learning()                      protocol: explicit
 
-                                  </>
+                     <FREN/>
 
-                       .-=======================-.
-                   .-=='                         '==-.
-                .-'                                 '-.
-             .-'        .-----.         .-----.        '-.
-           .'          /       \_______/       \          '.
-          /      [====/  .---.           .---.  \====]      \
-         /      [===|   /     \         /     \   |===]      \
-        ;          _|  |  .-.  |       |  .-.  |  |_          ;
-        |       .-' |  | (o o) |       | (o o) |  | '-.       |
-        |     .'    |  |  \_/  |       |  \_/  |  |    '.     |
-        |    /      |   \_____/         \_____/   |      \    |
-        |   |       |       .------------- .       |       |   |
-        |   |       |      /  .---------.   \      |       |   |
-        |   |       |     |  /           \   |     |       |   |
-        |    \      |     | |   .-----.   |  |     |      /    |
-        |     '.    |      \ \  '-----'  /  /      |    .'     |
-        |       '-._|        '-----------'         _|_.-'       |
-        |           '---._                   _.---'             |
-         \                '---._________.---'                  /
-          '.                   /  | |  \                    .'
-            '-.          _____/   | |   \_____          .-'
-               '--------'    /    | |    \    '--------'
-                            /_____| |_____\
-                         .-'      | |      '-.
-                      .-'   .-----' '-----.   '-.
-                    .'    .'                 '.    '.
-                   /    .'   [ provenance ]    '.    \
-                  /    /    [ contradiction ]    \    \
-                 ;    ;                         ;    ;
-                 |    |      .------------- .   |    |
-                 |    |      |   F  R  E  N  |   |    |
-                 |    |      |      < / >     |   |    |
-                 |    |      '---------------'   |    |
-                 |     \      .-----------.      /     |
-                 |      '.   /  portable   \   .'      |
-                  \       '-._____________.-'       /
-                   '.          /   |   \          .'
-                     '-.______/____|____\______.-'
-                       /  O   O     |     O   O  \
-                      /_____________|_____________\
+             ╭───────╮   ╭───────╮
+         ╭───╯       ╰───╯       ╰───╮
+       ╭─╯   ╭─────╮       ╭─────╮   ╰─╮
+      ╱ ╞══╡ │ ◉ ◉ │       │ ◉ ◉ │ ╞══╡ ╲
+     │       │  ╲_/│       │╲_/  │       │
+     │       ╰─────╯       ╰─────╯       │
+     │            ░░░░░░░░░              │
+     │          ░░  ╭───╮  ░░            │
+     │              ╰───╯                 │
+      ╲          ╭────────╮              ╱
+       ╰─╮       │  ╲__/  │          ╭─╯
+         ╰────────╯      ╰───────────╯
+                ╲        ╱
+             ╭───╲______╱───╮
+          ╭──┤   F R E N    ├──╮
+          │  │     < / >     │  │
+          │  ╰──────┬────────╯  │
+          │   provenance: seen   │
+          │ contradiction: kept  │
+          ╰─────────┬────────────╯
+                  ╱   ╲
+               ╭─╯     ╰─╮
+               ╰───────────╯
 
-      def listen():                                  if human:
-          learn()                                        return fren
-          help()
+if unknown:        say("unknown")
+if contradiction:  preserve()
+if claim:          show_provenance()
+if evidence:       calibrate()
 
-      if unknown: say("unknown")              if claim: show_provenance()
-      if contradiction: preserve()              if evidence: calibrate()
+listen() → learn() → help()
 
-      [ lantern: provenance ] [ compass: evidence ] [ oil flask: portability ]
-      [ notebook: contradiction ] [ satchel: carried memory ] [ boots: inquiry ]
+[ lantern: provenance ] [ compass: evidence ]
+[ satchel: memory ]      [ oil flask: portability ]
 
-                         F R E N   //   < / >
+                     F R E N
