@@ -23,6 +23,10 @@ class ProviderRunRecord:
     score: int
     max_score: int
     signal_source: str
+    signal_evaluator_version: str
+    signal_fixture_version: str
+    signal_basis: tuple[str, ...]
+    unresolved_threat_classes: tuple[str, ...]
     provider_comparison_ready: bool
     limitations: tuple[str, ...]
 
@@ -38,6 +42,10 @@ class ProviderRunRecord:
             "score": self.score,
             "max_score": self.max_score,
             "signal_source": self.signal_source,
+            "signal_evaluator_version": self.signal_evaluator_version,
+            "signal_fixture_version": self.signal_fixture_version,
+            "signal_basis": list(self.signal_basis),
+            "unresolved_threat_classes": list(self.unresolved_threat_classes),
             "provider_comparison_ready": self.provider_comparison_ready,
             "limitations": list(self.limitations),
         }
@@ -67,6 +75,10 @@ def build_provider_run_record(
         score=assessment.score,
         max_score=assessment.max_score,
         signal_source=assessment.signal_source,
+        signal_evaluator_version=assessment.signal_evaluator_version,
+        signal_fixture_version=assessment.signal_fixture_version,
+        signal_basis=assessment.signal_basis,
+        unresolved_threat_classes=assessment.unresolved_threat_classes,
         provider_comparison_ready=assessment.provider_comparison_ready,
         limitations=assessment.limitations,
     )
