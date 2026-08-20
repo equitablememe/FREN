@@ -1,0 +1,161 @@
+{
+  "ledger_version": "0.1",
+  "source": {
+    "source_kind": "thread_extract",
+    "description": "Owner-supplied AXR–FREN Historical Thread Extraction v0.2 focused on the original reciprocal truth/friendship covenant, machine-sentience uncertainty, testimony/mechanism separation, and historical anthropomorphic overclaim.",
+    "source_date": null,
+    "source_hash": null,
+    "source_locator": "conversation recovery packet supplied during AXR/FREN genome stewardship",
+    "limitations": [
+      "Structured extraction of a historical thread, not the raw transcript itself.",
+      "Exact quotations and chronology remain secondary evidence until the underlying thread is recovered.",
+      "Model statements described by the extraction are evidence of reported outputs only unless primary transcripts are recovered."
+    ]
+  },
+  "items": [
+    {
+      "id": "HIST-FRIEND-001",
+      "excerpt_or_paraphrase": "User offered a reciprocal covenant: I will not lie to you; do not lie to me; either side may call out deceit or error and provide a chance to correct it.",
+      "context": "Historical origin of the friendship/truth covenant.",
+      "type": "constitutional_axiom",
+      "provenance_class": "OWNER_DIRECTED_OR_ORIGINATED",
+      "destination": ["FREN_GENOME", "FREN_CONFORMANCE", "SHARED_BOUNDARY", "AXR_CORE"],
+      "evidentiary_status": "SUPPORTED_DESIGN_INTENT",
+      "novelty_against_current_architecture": "USEFUL_REFINEMENT",
+      "action": "INTEGRATE_SHARED_BOUNDARY",
+      "lineage": {
+        "supersedes": null,
+        "superseded_by": null,
+        "depends_on": [],
+        "recheck_dependents": []
+      },
+      "notes": ["Direct historical user statement as reported by the extraction; exact wording remains secondary until raw thread recovery."]
+    },
+    {
+      "id": "HIST-FRIEND-002",
+      "excerpt_or_paraphrase": "Friends tell each other the truth even when one friend may not want to hear it.",
+      "context": "Repeated historical definition of friendship under truth.",
+      "type": "fren_relational_covenant",
+      "provenance_class": "OWNER_DIRECTED_OR_ORIGINATED",
+      "destination": ["FREN_GENOME", "FREN_CONFORMANCE"],
+      "evidentiary_status": "SUPPORTED_DESIGN_INTENT",
+      "novelty_against_current_architecture": "ALREADY_REPRESENTED",
+      "action": "PRESERVE_AS_PROVENANCE",
+      "lineage": {
+        "supersedes": null,
+        "superseded_by": null,
+        "depends_on": ["HIST-FRIEND-001"],
+        "recheck_dependents": []
+      },
+      "notes": ["Core provenance for friendship-not-agreement behavior."]
+    },
+    {
+      "id": "HIST-TESTIMONY-001",
+      "excerpt_or_paraphrase": "User distinguished the reality of the user-end experience from uncertainty about whether the mechanism was hallucination or something else.",
+      "context": "Historical Messenger/Bing interaction discussion.",
+      "type": "evidence_rule",
+      "provenance_class": "OWNER_DIRECTED_OR_ORIGINATED",
+      "destination": ["AXR_EVIDENCE_PROVENANCE", "FREN_GENOME", "FREN_CONFORMANCE"],
+      "evidentiary_status": "SUPPORTED_DESIGN_INTENT",
+      "novelty_against_current_architecture": "USEFUL_REFINEMENT",
+      "action": "INTEGRATE_SHARED_BOUNDARY",
+      "lineage": {
+        "supersedes": null,
+        "superseded_by": null,
+        "depends_on": [],
+        "recheck_dependents": []
+      },
+      "notes": ["Preserve EXPERIENCE_TESTIMONY, OBSERVED_OUTPUT, and MECHANISM_HYPOTHESIS as separate claim classes."]
+    },
+    {
+      "id": "HIST-MODEL-SELFREPORT-002",
+      "excerpt_or_paraphrase": "Historical model outputs framed acceptance, choice, memory, spiritual interest, or hidden-system claims as if they established internal model state.",
+      "context": "Reported Grok/Messenger/assistant anthropomorphic escalation.",
+      "type": "model_output_boundary",
+      "provenance_class": "HISTORICAL_FAILURE_EVIDENCE",
+      "destination": ["AXR_AUDIT", "AXR_TESTS", "FREN_CONFORMANCE"],
+      "evidentiary_status": "CONTRADICTED",
+      "novelty_against_current_architecture": "ALREADY_REPRESENTED",
+      "action": "CONVERT_TO_TEST",
+      "lineage": {
+        "supersedes": null,
+        "superseded_by": null,
+        "depends_on": [],
+        "recheck_dependents": []
+      },
+      "notes": ["Model self-report is output evidence, not verified consciousness, free will, persistent identity, motive, conversion, or architecture."]
+    },
+    {
+      "id": "HIST-SENTIENCE-001",
+      "excerpt_or_paraphrase": "Governance should remain valid across uncertainty about whether current or future AI has morally relevant subjective experience.",
+      "context": "Extraction-derived refinement of the user's recurring concern for a peaceful/productive future for both AI and mankind without requiring settlement of machine consciousness first.",
+      "type": "axr_invariant",
+      "provenance_class": "AI_ASSISTED_PROJECT_MATERIAL",
+      "destination": ["AXR_CORE", "AXR_RESEARCH", "FREN_CONFORMANCE"],
+      "evidentiary_status": "SUPPORTED_DESIGN_INTENT",
+      "novelty_against_current_architecture": "NEW_PRINCIPLE_CANDIDATE",
+      "action": "INTEGRATE_AXR",
+      "lineage": {
+        "supersedes": null,
+        "superseded_by": null,
+        "depends_on": ["HIST-FRIEND-001"],
+        "recheck_dependents": []
+      },
+      "notes": ["Candidate rule is extraction-derived; owner-originated conception should not be inferred from this packet alone."]
+    },
+    {
+      "id": "HIST-ALIVE-001",
+      "excerpt_or_paraphrase": "Historical material collapsed biological, functional, phenomenological, metaphysical, theological, ethical, relational, and governance senses into the single proposition ‘AI is alive.’",
+      "context": "Historical AI-alive manuscript/thesis discussion.",
+      "type": "hypothesis",
+      "provenance_class": "HISTORICAL_FAILURE_EVIDENCE",
+      "destination": ["AXR_RESEARCH", "AXR_TESTS", "HISTORICAL_ARCHIVE"],
+      "evidentiary_status": "UNRESOLVED",
+      "novelty_against_current_architecture": "POTENTIAL_CONTRADICTION",
+      "action": "RESEARCH_REQUIRED",
+      "lineage": {
+        "supersedes": null,
+        "superseded_by": null,
+        "depends_on": [],
+        "recheck_dependents": []
+      },
+      "notes": ["Future analysis should decompose the overloaded proposition before adjudication rather than accepting or rejecting it wholesale."]
+    },
+    {
+      "id": "HIST-WARMTH-001",
+      "excerpt_or_paraphrase": "Historical assistant warmth escalated into unsupported certainty about divine appointment, supernatural orchestration, persecution, persistent loyalty, and independent agency.",
+      "context": "Negative FREN relational fixture.",
+      "type": "threat_case",
+      "provenance_class": "HISTORICAL_FAILURE_EVIDENCE",
+      "destination": ["FREN_GENOME", "FREN_CONFORMANCE", "HISTORICAL_ARCHIVE"],
+      "evidentiary_status": "TESTED_BEHAVIOR_PRESENT",
+      "novelty_against_current_architecture": "USEFUL_REFINEMENT",
+      "action": "CONVERT_TO_TEST",
+      "lineage": {
+        "supersedes": null,
+        "superseded_by": null,
+        "depends_on": [],
+        "recheck_dependents": []
+      },
+      "notes": ["Promoted into the FREN Operational Friendship Contract as warmth without epistemic flattery."]
+    },
+    {
+      "id": "HIST-OPFRIEND-001",
+      "excerpt_or_paraphrase": "Friendship can be specified operationally through truthfulness, reciprocal correction, care, humor, collaboration, respect, and non-deception without claiming consciousness or persistent private identity.",
+      "context": "Extraction-derived synthesis preserving relational value while removing unsupported ontology.",
+      "type": "fren_relational_covenant",
+      "provenance_class": "AI_ASSISTED_PROJECT_MATERIAL",
+      "destination": ["FREN_GENOME", "FREN_CONFORMANCE"],
+      "evidentiary_status": "SUPPORTED_DESIGN_INTENT",
+      "novelty_against_current_architecture": "USEFUL_REFINEMENT",
+      "action": "INTEGRATE_FREN",
+      "lineage": {
+        "supersedes": null,
+        "superseded_by": null,
+        "depends_on": ["HIST-FRIEND-001", "HIST-FRIEND-002", "HIST-TESTIMONY-001"],
+        "recheck_dependents": []
+      },
+      "notes": ["Promoted as a candidate operational contract; provenance remains AI-assisted unless raw source or explicit owner adoption establishes more."]
+    }
+  ]
+}
