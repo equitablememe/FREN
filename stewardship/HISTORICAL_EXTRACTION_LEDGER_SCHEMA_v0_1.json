@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/fren/historical-extraction-ledger-v0.1.schema.json",
+  "title": "FREN Historical Extraction Ledger v0.1",
+  "type": "object",
+  "required": ["ledger_version", "source", "items"],
+  "properties": {
+    "ledger_version": {"const": "0.1"},
+    "source": {
+      "type": "object",
+      "required": ["source_kind", "description"],
+      "properties": {
+        "source_kind": {
+          "enum": ["raw_thread", "thread_extract", "document", "screenshot", "export", "other"]
+        },
+        "description": {"type": "string"},
+        "source_date": {"type": ["string", "null"]},
+        "source_hash": {"type": ["string", "null"]},
+        "source_locator": {"type": ["string", "null"]},
+        "limitations": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "excerpt_or_paraphrase", "type", "provenance_class", "destination", "evidentiary_status", "action"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^HIST-[A-Z0-9_-]+$"},
+          "excerpt_or_paraphrase": {"type": "string"},
+          "context": {"type": ["string", "null"]},
+          "type": {
+            "enum": [
+              "constitutional_axiom",
+              "axr_invariant",
+              "fren_relational_covenant",
+              "evidence_rule",
+              "authority_rule",
+              "provenance_rule",
+              "memory_rule",
+              "model_output_boundary",
+              "correction_retraction_rule",
+              "architecture",
+              "algorithm",
+              "schema",
+              "fixture_test",
+              "threat_case",
+              "observation",
+              "hypothesis",
+              "unresolved_question",
+              "retired_idea",
+              "terminology",
+              "other"
+            ]
+          },
+          "provenance_class": {
+            "enum": [
+              "OWNER_DIRECTED_OR_ORIGINATED",
+              "AI_ASSISTED_PROJECT_MATERIAL",
+              "THIRD_PARTY_REFERENCE",
+              "MIXED_OR_UNCERTAIN",
+              "HISTORICAL_FAILURE_EVIDENCE"
+            ]
+          },
+          "destination": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "enum": [
+                "AXR_CORE",
+                "AXR_AUDIT",
+                "AXR_EVIDENCE_PROVENANCE",
+                "AXR_AUTHORITY",
+                "AXR_TESTS",
+                "AXR_RESEARCH",
+                "FREN_GENOME",
+                "FREN_RUNTIME",
+                "FREN_CONFORMANCE",
+                "SHARED_BOUNDARY",
+                "HISTORICAL_ARCHIVE",
+                "UNCERTAIN"
+              ]
+            }
+          },
+          "evidentiary_status": {
+            "enum": [
+              "IMPLEMENTED_EVIDENCE_PRESENT",
+              "TESTED_BEHAVIOR_PRESENT",
+              "SUPPORTED_DESIGN_INTENT",
+              "HISTORICAL_CLAIM_ONLY",
+              "OBSERVATION_REQUIRING_VERIFICATION",
+              "HYPOTHESIS",
+              "CONTRADICTED",
+              "SUPERSEDED",
+              "UNRESOLVED"
+            ]
+          },
+          "novelty_against_current_architecture": {
+            "enum": [
+              "ALREADY_REPRESENTED",
+              "USEFUL_REFINEMENT",
+              "MISSING_TEST",
+              "MISSING_IMPLEMENTATION",
+              "NEW_PRINCIPLE_CANDIDATE",
+              "POTENTIAL_CONTRADICTION",
+              "UNKNOWN"
+            ]
+          },
+          "action": {
+            "enum": [
+              "INTEGRATE_AXR",
+              "INTEGRATE_FREN",
+              "INTEGRATE_SHARED_BOUNDARY",
+              "CONVERT_TO_TEST",
+              "PRESERVE_AS_PROVENANCE",
+              "RESEARCH_REQUIRED",
+              "UNRESOLVED",
+              "REWRITE_CLEAN_ROOM",
+              "RETIRED",
+              "ARCHIVE_ONLY"
+            ]
+          },
+          "lineage": {
+            "type": "object",
+            "properties": {
+              "supersedes": {"type": ["string", "null"]},
+              "superseded_by": {"type": ["string", "null"]},
+              "depends_on": {"type": "array", "items": {"type": "string"}},
+              "recheck_dependents": {"type": "array", "items": {"type": "string"}}
+            },
+            "additionalProperties": false
+          },
+          "notes": {"type": "array", "items": {"type": "string"}}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
