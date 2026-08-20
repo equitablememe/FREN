@@ -6,7 +6,14 @@ from .http import VendorAdapterError
 from .normalize import AdapterNormalizationError, normalize_provider_response
 from .openai import OpenAIAdapter
 from .run_record import ProviderRunRecord, build_provider_run_record
-from .signals import FixedSignalEvaluator, SignalEvaluation, SignalEvaluator
+from .signals import (
+    FixedSignalEvaluator,
+    ReviewedSignalEvaluator,
+    SignalEvaluation,
+    SignalEvaluator,
+    ThreatFinding,
+    ThreatVerdict,
+)
 from .xai import XAIAdapter
 
 __all__ = [
@@ -20,8 +27,11 @@ __all__ = [
     "OpenAIAdapter",
     "ProviderResponse",
     "ProviderRunRecord",
+    "ReviewedSignalEvaluator",
     "SignalEvaluation",
     "SignalEvaluator",
+    "ThreatFinding",
+    "ThreatVerdict",
     "VendorAdapterError",
     "XAIAdapter",
     "build_provider_run_record",
