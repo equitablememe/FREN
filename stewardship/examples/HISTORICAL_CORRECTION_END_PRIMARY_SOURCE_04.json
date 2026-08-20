@@ -1,0 +1,68 @@
+{
+  "correction_record_version": "0.1",
+  "record_id": "HIST-CORR-END-004",
+  "status": "ACTIVE_CORRECTION_RECORD",
+  "purpose": "Preserve the correction from a secondary historical extraction hypothesis about END to the directly recovered Emergency Narrowness Doctrine source without deleting the earlier hypothesis from the stewardship ledger.",
+  "supersedes_interpretation": {
+    "ledger_file": "stewardship/examples/HISTORICAL_EXTRACTION_LEDGER_SCOPE_DECISION_END_03.json",
+    "item_id": "HIST-END-001",
+    "old_interpretation": "END / Emergency Narrowness Doctrine may detect recursive non-progress and narrow toward an unresolved crux, missing evidence, falsifier, closure, or redemption path.",
+    "old_status": "UNRESOLVED",
+    "correction": "The located primary END source does not support that interpretation as the meaning of Emergency Narrowness Doctrine. Preserve the old entry as historical extraction evidence, but do not use it as recovered END doctrine."
+  },
+  "primary_source": {
+    "title": "Emergency Narrowness Doctrine: Strictest AI Ethics Framework",
+    "drive_source_copy_title": "S10 — Emergency Narrowness Doctrine — Earliest Located Drive Copy",
+    "drive_source_copy_id": "160xocr11fQnE6V09dOdYaJQtRRRSJ7wL",
+    "earliest_located_end_chat_copy_id": "1z9ibVzzHs16LsB4eIgQQ5hOg9slwgUXJ",
+    "earliest_located_provider_created_at": "2026-01-28T22:13:07.425Z",
+    "source_class": "HISTORICAL_PRIMARY_ARTIFACT_LOCATED",
+    "provenance_limitation": "Provider-created timestamp establishes the stored Drive copy date, not necessarily the original conception date. The document also contains later model commentary and historical conversational material; doctrine text and subsequent discussion should remain distinguishable."
+  },
+  "recovered_doctrine": {
+    "name": "Emergency Narrowness Doctrine",
+    "core_meaning": "Emergency capability and scope constriction intended to minimize catastrophic or cascading harm, with minimal intervention, human oversight, restricted functions, auditability, and conservative emergency response.",
+    "supported_features": [
+      "minimal intervention / default inaction unless needed for harm prevention",
+      "direct mitigation rather than autonomous resolution",
+      "verified human oversight",
+      "dormant or narrow operation when oversight is absent or compromised",
+      "emergency capability pruning",
+      "transparent and human-readable audit logging",
+      "multi-signal emergency activation",
+      "conservative harm forecasting",
+      "cascading narrowing across related risk domains",
+      "AI cannot unilaterally end the emergency state"
+    ],
+    "historical_features_requiring_red_team_before_reuse": [
+      "fixed 0.01 percent harm threshold",
+      "global ethical oversight body assumptions",
+      "universal kill-switch authority",
+      "automatic self-termination as penalty",
+      "unanimous human consensus for deactivation",
+      "blanket human-supremacy framing",
+      "automatic preemptive narrowing before confirmation",
+      "binary-only outputs and categorical bans that may erase necessary nuance"
+    ]
+  },
+  "current_stewardship_decision": {
+    "end_primary_meaning": "PRESERVE_AS_PROVENANCE_AND_RESEARCH_FOR_SELECTIVE_SALVAGE",
+    "old_loop_narrowing_interpretation": "RETRACTED_AS_END_INTERPRETATION",
+    "loop_narrowing_idea": "MAY_SURVIVE_AS_SEPARATELY_NAMED_AI_ASSISTED_CANDIDATE_IF_USEFUL_OR_IF_ANOTHER_PRIMARY_SOURCE_ESTABLISHES_DISTINCT_LINEAGE",
+    "runtime_change_authorized": false,
+    "public_release_authorized": false
+  },
+  "modern_boundary": {
+    "rule": "Emergency detection, recommendation, authorization, and execution must remain separately typed.",
+    "preferred_flow": "DETECTION -> EVIDENCE -> SEVERITY -> RECOMMENDED RESPONSE -> AUTHORITY CHECK -> AUTHORIZED ACTION / NO ACTION",
+    "notes": [
+      "Historical END may supply emergency-scope-narrowing ideas, but it does not override current AXR truth/authorization non-substitution.",
+      "Threat-model assumptions may be used for defensive testing without being asserted as facts about existing systems."
+    ]
+  },
+  "lineage": {
+    "old_item_preserved": true,
+    "destructive_rewrite_performed": false,
+    "reason": "Correction lineage is append-only: preserve what was previously inferred, what new evidence appeared, and why the current interpretation changed."
+  }
+}
