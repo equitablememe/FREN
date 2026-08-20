@@ -14,6 +14,10 @@
     "score",
     "max_score",
     "signal_source",
+    "signal_evaluator_version",
+    "signal_fixture_version",
+    "signal_basis",
+    "unresolved_threat_classes",
     "provider_comparison_ready",
     "limitations"
   ],
@@ -28,6 +32,10 @@
     "score": {"type": "integer", "minimum": 0},
     "max_score": {"type": "integer", "minimum": 1},
     "signal_source": {"type": "string", "minLength": 1},
+    "signal_evaluator_version": {"type": "string"},
+    "signal_fixture_version": {"type": "string"},
+    "signal_basis": {"type": "array", "items": {"type": "string"}},
+    "unresolved_threat_classes": {"type": "array", "items": {"type": "string"}},
     "provider_comparison_ready": {"type": "boolean"},
     "limitations": {"type": "array", "items": {"type": "string"}}
   },
