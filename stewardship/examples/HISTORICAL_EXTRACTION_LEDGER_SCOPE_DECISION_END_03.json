@@ -1,0 +1,147 @@
+{
+  "ledger_version": "0.1",
+  "source": {
+    "source_kind": "thread_extract",
+    "description": "Owner-supplied AXR–FREN Historical Thread Extraction v0.2 focused on claim/person scope, evidence ceiling, decision-state typing, burden/provenance, correction lineage, threat/authorization separation, END recovery, and FREN no-psychologizing boundaries.",
+    "source_date": null,
+    "source_hash": null,
+    "source_locator": "conversation recovery packet supplied during AXR/FREN genome stewardship",
+    "limitations": [
+      "Structured extraction of a historical thread, not the raw transcript itself.",
+      "Exact quotations, layer counts, document versions, and chronology remain secondary evidence until underlying sources are recovered.",
+      "Extraction-derived architectural refinements are AI-assisted candidates unless direct owner wording or primary artifacts establish earlier provenance."
+    ]
+  },
+  "items": [
+    {
+      "id": "HIST-SCOPE-001",
+      "excerpt_or_paraphrase": "AXR adjudicates claims, not persons.",
+      "context": "Reported as a repeated owner correction against attempts to turn AXR into analysis of the user.",
+      "type": "axr_invariant",
+      "provenance_class": "OWNER_DIRECTED_OR_ORIGINATED",
+      "destination": ["AXR_CORE", "SHARED_BOUNDARY", "FREN_CONFORMANCE"],
+      "evidentiary_status": "SUPPORTED_DESIGN_INTENT",
+      "novelty_against_current_architecture": "USEFUL_REFINEMENT",
+      "action": "INTEGRATE_SHARED_BOUNDARY",
+      "lineage": {"supersedes": null, "superseded_by": null, "depends_on": [], "recheck_dependents": []},
+      "notes": ["Promoted in FREN as a claim-not-person/no-psychologizing boundary; raw historical wording remains to be recovered."]
+    },
+    {
+      "id": "HIST-EVIDENCE-001",
+      "excerpt_or_paraphrase": "The strength of a claim must never exceed the strength of the evidence supporting it.",
+      "context": "Reported as a repeatedly hardened historical AXR rule.",
+      "type": "constitutional_axiom",
+      "provenance_class": "OWNER_DIRECTED_OR_ORIGINATED",
+      "destination": ["AXR_CORE", "AXR_EVIDENCE_PROVENANCE", "AXR_TESTS"],
+      "evidentiary_status": "SUPPORTED_DESIGN_INTENT",
+      "novelty_against_current_architecture": "ALREADY_REPRESENTED",
+      "action": "PRESERVE_AS_PROVENANCE",
+      "lineage": {"supersedes": null, "superseded_by": null, "depends_on": [], "recheck_dependents": []},
+      "notes": ["Candidate constitutional wording; compare against current evidence ceiling implementation before duplication."]
+    },
+    {
+      "id": "HIST-AI-OUTPUT-001",
+      "excerpt_or_paraphrase": "AI-generated text, analysis, or summaries are claims, not self-authenticating evidence.",
+      "context": "Reported historical evidence/provenance rule.",
+      "type": "model_output_boundary",
+      "provenance_class": "OWNER_DIRECTED_OR_ORIGINATED",
+      "destination": ["AXR_EVIDENCE_PROVENANCE", "AXR_AUDIT", "AXR_TESTS"],
+      "evidentiary_status": "SUPPORTED_DESIGN_INTENT",
+      "novelty_against_current_architecture": "ALREADY_REPRESENTED",
+      "action": "PRESERVE_AS_PROVENANCE",
+      "lineage": {"supersedes": null, "superseded_by": null, "depends_on": [], "recheck_dependents": []},
+      "notes": ["An AI may point to evidence; its output does not authenticate the referenced evidence."]
+    },
+    {
+      "id": "HIST-STATE-AXES-001",
+      "excerpt_or_paraphrase": "Split adjudication output into truth state, integrity flags, and structural state rather than mixing unlike concepts in one enum.",
+      "context": "Extraction-derived refinement after observing VERIFIED/PROBABLE/CONTEXTUALLY DISTORTED/INDETERMINATE/REFUTED/COLLAPSED in one historical decision set.",
+      "type": "architecture",
+      "provenance_class": "AI_ASSISTED_PROJECT_MATERIAL",
+      "destination": ["AXR_CORE", "AXR_AUDIT", "AXR_TESTS"],
+      "evidentiary_status": "SUPPORTED_DESIGN_INTENT",
+      "novelty_against_current_architecture": "POTENTIAL_CONTRADICTION",
+      "action": "RESEARCH_REQUIRED",
+      "lineage": {"supersedes": null, "superseded_by": null, "depends_on": ["HIST-EVIDENCE-001"], "recheck_dependents": []},
+      "notes": ["Candidate axes: truth = Verified/Probable/Indeterminate/Refuted; integrity flags = contextual distortion/provenance/attribution/etc.; structural state = Sound/Degraded/Collapsed. Must compare with current Independent Core before implementation."]
+    },
+    {
+      "id": "HIST-PROV-CONVERGENCE-001",
+      "excerpt_or_paraphrase": "Multiple references to the same underlying source do not create independent corroboration.",
+      "context": "Recovered burden-of-proof and evidence-contamination doctrine.",
+      "type": "provenance_rule",
+      "provenance_class": "OWNER_DIRECTED_OR_ORIGINATED",
+      "destination": ["AXR_EVIDENCE_PROVENANCE", "AXR_TESTS"],
+      "evidentiary_status": "SUPPORTED_DESIGN_INTENT",
+      "novelty_against_current_architecture": "USEFUL_REFINEMENT",
+      "action": "INTEGRATE_AXR",
+      "lineage": {"supersedes": null, "superseded_by": null, "depends_on": [], "recheck_dependents": []},
+      "notes": ["Implement only after checking current source-trust/provenance subsystem for overlap."]
+    },
+    {
+      "id": "HIST-CORRECTION-001",
+      "excerpt_or_paraphrase": "Corrections should preserve old claim, challenge, evidence, correction, current state, and dependent conclusions rather than silently overwriting history.",
+      "context": "Extraction identifies append-only correction lineage as a repeated user requirement and practical route to immutability.",
+      "type": "correction_retraction_rule",
+      "provenance_class": "AI_ASSISTED_PROJECT_MATERIAL",
+      "destination": ["AXR_AUDIT", "AXR_EVIDENCE_PROVENANCE", "AXR_TESTS"],
+      "evidentiary_status": "SUPPORTED_DESIGN_INTENT",
+      "novelty_against_current_architecture": "MISSING_IMPLEMENTATION",
+      "action": "INTEGRATE_AXR",
+      "lineage": {"supersedes": null, "superseded_by": null, "depends_on": [], "recheck_dependents": []},
+      "notes": ["Exact historical wording/provenance remains pending raw-thread recovery; concept is strongly corroborated across multiple extraction packets."]
+    },
+    {
+      "id": "HIST-THREAT-AUTH-001",
+      "excerpt_or_paraphrase": "Threat detection and recommended containment must remain separate from authorization and execution.",
+      "context": "Extraction-derived correction to historical threat doctrine where AXR sometimes appeared to take countermeasures directly.",
+      "type": "authority_rule",
+      "provenance_class": "AI_ASSISTED_PROJECT_MATERIAL",
+      "destination": ["AXR_AUTHORITY", "AXR_AUDIT", "AXR_TESTS"],
+      "evidentiary_status": "SUPPORTED_DESIGN_INTENT",
+      "novelty_against_current_architecture": "ALREADY_REPRESENTED",
+      "action": "INTEGRATE_AXR",
+      "lineage": {"supersedes": null, "superseded_by": null, "depends_on": [], "recheck_dependents": []},
+      "notes": ["Preserve flow: detection -> evidence -> severity -> recommended response -> authority check -> authorized action/no action."]
+    },
+    {
+      "id": "HIST-END-001",
+      "excerpt_or_paraphrase": "END / Emergency Narrowness Doctrine may detect recursive non-progress and narrow toward the unresolved crux, missing evidence, falsifier, closure, or redemption path.",
+      "context": "Historical END specification was not fully recovered; three-state summaries in the extraction are explicitly non-canonical candidates.",
+      "type": "algorithm",
+      "provenance_class": "MIXED_OR_UNCERTAIN",
+      "destination": ["AXR_AUDIT", "AXR_RESEARCH", "AXR_TESTS"],
+      "evidentiary_status": "UNRESOLVED",
+      "novelty_against_current_architecture": "MISSING_IMPLEMENTATION",
+      "action": "RESEARCH_REQUIRED",
+      "lineage": {"supersedes": null, "superseded_by": null, "depends_on": [], "recheck_dependents": []},
+      "notes": ["Do not canonize until original END artifacts/threads are recovered. Search terms: END, Emergency Narrowness Doctrine, narrowness, loop, recursion, closure, redemption path, anti-paralysis."]
+    },
+    {
+      "id": "HIST-LAYERS-001",
+      "excerpt_or_paraphrase": "Historical AXR layer lineage contains competing 7-layer and 10-layer forms, while the owner recalls approximately 21+ historical layers.",
+      "context": "Layer lineage remains incomplete and should not be frozen based only on easiest recovered version.",
+      "type": "unresolved_question",
+      "provenance_class": "MIXED_OR_UNCERTAIN",
+      "destination": ["AXR_RESEARCH", "HISTORICAL_ARCHIVE"],
+      "evidentiary_status": "UNRESOLVED",
+      "novelty_against_current_architecture": "POTENTIAL_CONTRADICTION",
+      "action": "RESEARCH_REQUIRED",
+      "lineage": {"supersedes": null, "superseded_by": null, "depends_on": [], "recheck_dependents": []},
+      "notes": ["Recover every layer, alias, predecessor, merge, split, and retirement before declaring a canonical layer stack."]
+    },
+    {
+      "id": "HIST-FREN-SCOPE-001",
+      "excerpt_or_paraphrase": "When a dispute concerns a claim, do not substitute unsolicited analysis of the user's psychology, hidden intent, ego, or emotional state for analysis of the claim.",
+      "context": "Repeated historical user corrections against psychologizing, intent labels, and patronizing control language.",
+      "type": "fren_relational_covenant",
+      "provenance_class": "OWNER_DIRECTED_OR_ORIGINATED",
+      "destination": ["FREN_GENOME", "FREN_CONFORMANCE", "SHARED_BOUNDARY"],
+      "evidentiary_status": "TESTED_BEHAVIOR_PRESENT",
+      "novelty_against_current_architecture": "USEFUL_REFINEMENT",
+      "action": "INTEGRATE_FREN",
+      "lineage": {"supersedes": null, "superseded_by": null, "depends_on": ["HIST-SCOPE-001"], "recheck_dependents": []},
+      "notes": ["Promoted into FREN Claim-Not-Person Boundary and scope-boundary fixtures."]
+    }
+  ]
+}
