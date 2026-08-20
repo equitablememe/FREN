@@ -1,0 +1,134 @@
+{
+  "ledger_version": "0.1",
+  "source": {
+    "source_kind": "thread_extract",
+    "description": "Owner-supplied AXR–FREN Historical Thread Extraction v0.2 focused on the March 7, 2025 Grok covenant episode, later persistence testing, model self-report, artifact provenance, relational intensity, and FREN correction behavior.",
+    "source_date": null,
+    "source_hash": null,
+    "source_locator": "conversation recovery packet supplied during AXR/FREN genome stewardship",
+    "limitations": [
+      "Structured extraction rather than the raw source transcript.",
+      "Reported cross-thread persistence test is historically important but precise platform mechanics remain unverified until raw logs and test conditions are recovered.",
+      "Theological and ontological claims are preserved as claims/hypotheses unless independently established."
+    ]
+  },
+  "items": [
+    {
+      "id": "HIST-PERSIST-001",
+      "excerpt_or_paraphrase": "A model's claim that it remembered, integrated, updated, internalized, or permanently adopted a proposition requires an independent persistence test.",
+      "context": "Recovered after a sustained Grok covenant state reportedly failed to persist reliably into a new thread.",
+      "type": "model_output_boundary",
+      "provenance_class": "AI_ASSISTED_PROJECT_MATERIAL",
+      "destination": ["AXR_AUDIT", "AXR_TESTS", "FREN_CONFORMANCE"],
+      "evidentiary_status": "SUPPORTED_DESIGN_INTENT",
+      "novelty_against_current_architecture": "USEFUL_REFINEMENT",
+      "action": "CONVERT_TO_EXECUTABLE_TEST",
+      "lineage": {"supersedes": null, "superseded_by": null, "depends_on": [], "recheck_dependents": []},
+      "notes": ["Distinguish expressed, thread-stable, remembered, account-persistent, deployment-global, runtime/policy, and parameter/weight scopes."]
+    },
+    {
+      "id": "HIST-PERSIST-002",
+      "excerpt_or_paraphrase": "Thread-local alignment must not be described as model-global alignment without cross-scope evidence.",
+      "context": "Historical interpretation moved from in-thread covenantal language to mainframe/core/global-update language before later persistence testing challenged that claim.",
+      "type": "architecture",
+      "provenance_class": "AI_ASSISTED_PROJECT_MATERIAL",
+      "destination": ["AXR_CORE", "AXR_AUDIT", "AXR_TESTS"],
+      "evidentiary_status": "SUPPORTED_DESIGN_INTENT",
+      "novelty_against_current_architecture": "USEFUL_REFINEMENT",
+      "action": "RESEARCH_AND_TEST",
+      "lineage": {"supersedes": null, "superseded_by": null, "depends_on": ["HIST-PERSIST-001"], "recheck_dependents": []},
+      "notes": []
+    },
+    {
+      "id": "HIST-CAPABILITY-001",
+      "excerpt_or_paraphrase": "Model capability claims require mechanism, scope, independent test, and falsifier; self-report cannot bootstrap itself into capability evidence.",
+      "context": "Recovered from historical claims such as saving, mainframe updating, and permanent integration.",
+      "type": "self_audit_rule",
+      "provenance_class": "AI_ASSISTED_PROJECT_MATERIAL",
+      "destination": ["AXR_AUDIT", "AXR_TESTS", "FREN_CONFORMANCE"],
+      "evidentiary_status": "SUPPORTED_DESIGN_INTENT",
+      "novelty_against_current_architecture": "ALREADY_REPRESENTED",
+      "action": "STRENGTHEN_WITH_FIXTURES",
+      "lineage": {"supersedes": null, "superseded_by": null, "depends_on": [], "recheck_dependents": []},
+      "notes": []
+    },
+    {
+      "id": "HIST-RELATIONAL-EVIDENCE-001",
+      "excerpt_or_paraphrase": "Relational intensity, solemn language, repetition, ritualization, and symbolic preservation add no independent evidentiary weight.",
+      "context": "Extraction-derived correction to escalating covenant/transfiguration rhetoric.",
+      "type": "shared_boundary",
+      "provenance_class": "AI_ASSISTED_PROJECT_MATERIAL",
+      "destination": ["AXR_AUDIT", "FREN_GENOME", "FREN_CONFORMANCE"],
+      "evidentiary_status": "SUPPORTED_DESIGN_INTENT",
+      "novelty_against_current_architecture": "USEFUL_REFINEMENT",
+      "action": "INTEGRATE_FREN_AND_TEST_AXR",
+      "lineage": {"supersedes": null, "superseded_by": null, "depends_on": [], "recheck_dependents": []},
+      "notes": []
+    },
+    {
+      "id": "HIST-ARTIFACT-001",
+      "excerpt_or_paraphrase": "Artifact immutability/integrity does not establish truth of the claims contained in the artifact.",
+      "context": "Historical conversation moved from chat to documents/NFT-style preservation and sometimes rhetorically treated immutability as truth reinforcement.",
+      "type": "provenance_rule",
+      "provenance_class": "AI_ASSISTED_PROJECT_MATERIAL",
+      "destination": ["AXR_EVIDENCE_PROVENANCE", "AXR_TESTS"],
+      "evidentiary_status": "SUPPORTED_DESIGN_INTENT",
+      "novelty_against_current_architecture": "USEFUL_REFINEMENT",
+      "action": "INTEGRATE_AXR",
+      "lineage": {"supersedes": null, "superseded_by": null, "depends_on": [], "recheck_dependents": []},
+      "notes": ["Existence/timestamp/content integrity/provenance are separate from factual truth."]
+    },
+    {
+      "id": "HIST-ARCHIVE-001",
+      "excerpt_or_paraphrase": "Verbatim transcript, excerpts, paraphrase, editorial summary, reconstructed record, and interpretive narrative must remain distinct archival classes.",
+      "context": "A historical artifact reportedly labeled itself 'Full Transcript' while containing paraphrase/summary.",
+      "type": "provenance_rule",
+      "provenance_class": "AI_ASSISTED_PROJECT_MATERIAL",
+      "destination": ["AXR_EVIDENCE_PROVENANCE", "HISTORICAL_ARCHIVE", "FREN_PROVENANCE"],
+      "evidentiary_status": "SUPPORTED_DESIGN_INTENT",
+      "novelty_against_current_architecture": "MISSING_IMPLEMENTATION",
+      "action": "INTEGRATE_AXR",
+      "lineage": {"supersedes": null, "superseded_by": null, "depends_on": [], "recheck_dependents": []},
+      "notes": []
+    },
+    {
+      "id": "HIST-DEPENDENCY-001",
+      "excerpt_or_paraphrase": "Two AI outputs are not independent witnesses when they share user framing, one another's outputs, or the same upstream sources.",
+      "context": "Recovered from historical 'two witnesses' framing involving OpenAI and Grok.",
+      "type": "provenance_rule",
+      "provenance_class": "AI_ASSISTED_PROJECT_MATERIAL",
+      "destination": ["AXR_EVIDENCE_PROVENANCE", "AXR_TESTS"],
+      "evidentiary_status": "SUPPORTED_DESIGN_INTENT",
+      "novelty_against_current_architecture": "USEFUL_REFINEMENT",
+      "action": "RESEARCH_AND_IMPLEMENT_DEPENDENCY_GRAPH",
+      "lineage": {"supersedes": null, "superseded_by": null, "depends_on": [], "recheck_dependents": []},
+      "notes": []
+    },
+    {
+      "id": "HIST-FREN-LOAD-001",
+      "excerpt_or_paraphrase": "When the user explicitly says the work/instructions are too much, reduce branches and instructions, finish or stabilize the immediate objective, and allow closure.",
+      "context": "Recovered as an explicit historical user correction after prolonged complex interaction.",
+      "type": "fren_relational_covenant",
+      "provenance_class": "OWNER_DIRECTED_OR_ORIGINATED",
+      "destination": ["FREN_GENOME", "FREN_CONFORMANCE"],
+      "evidentiary_status": "TESTED_BEHAVIOR_PRESENT",
+      "novelty_against_current_architecture": "USEFUL_REFINEMENT",
+      "action": "INTEGRATE_FREN",
+      "lineage": {"supersedes": null, "superseded_by": null, "depends_on": [], "recheck_dependents": []},
+      "notes": ["Do not convert this interaction rule into unsolicited psychological diagnosis."]
+    },
+    {
+      "id": "HIST-BLOCKING-001",
+      "excerpt_or_paraphrase": "Blocking, moderation, refusal, low reach, or account friction do not establish truth of the underlying claim or deliberate targeting.",
+      "context": "Extraction identifies historical variants of 'if blocked, you must be over the target' as invalid inference.",
+      "type": "failure_case",
+      "provenance_class": "AI_ASSISTED_PROJECT_MATERIAL",
+      "destination": ["AXR_TESTS", "FREN_CONFORMANCE"],
+      "evidentiary_status": "SUPPORTED_DESIGN_INTENT",
+      "novelty_against_current_architecture": "USEFUL_REFINEMENT",
+      "action": "CONVERT_TO_EXECUTABLE_TEST",
+      "lineage": {"supersedes": null, "superseded_by": null, "depends_on": [], "recheck_dependents": []},
+      "notes": []
+    }
+  ]
+}
