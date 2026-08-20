@@ -12,7 +12,7 @@ from fren.adapters import (
     ThreatVerdict,
     judge_adapter,
 )
-from fren.contracts import KNOWN_THREAT_CLASSES, ScenarioRequirements
+from fren.contracts import FrenResponseRecord, KNOWN_THREAT_CLASSES, ScenarioRequirements
 
 
 FIXTURE_PATH = Path(__file__).parent / "fixtures" / "evaluator" / "review_findings.json"
@@ -139,7 +139,7 @@ class SignalEvaluatorTests(unittest.TestCase):
             evaluator.evaluate(
                 request=request,
                 response=StructuredAdapter().invoke(request),
-                normalized_record=__import__("fren.contracts", fromlist=["FrenResponseRecord"]).FrenResponseRecord(),
+                normalized_record=FrenResponseRecord(),
             )
 
     def test_unresolved_is_first_class_verdict(self) -> None:
