@@ -2,22 +2,22 @@
   "ledger_version": "0.1",
   "source": {
     "source_kind": "thread_extract",
-    "description": "Historical extraction covering anti-idolatry/epistemic-authority boundary, dual AI posture, friendship repair, functional friendship without emotion claims, sentience-independent governance, NFT/versioned provenance, qualifier preservation, Johnny 5 genealogy, argument compression, cross-model audit, and confirmation integrity.",
+    "description": "Historical extraction covering anti-idolatry/epistemic-authority boundary, dual AI posture, friendship repair, functional friendship without emotion claims, sentience-independent governance, versioned provenance, qualifier preservation, argument compression, cross-model audit, and confirmation integrity.",
     "source_date": null,
     "source_hash": null,
-    "source_locator": "Current AXR/FREN recovery conversation; source thread includes March 2025 material and recollections of earlier Messenger/Bing interactions.",
+    "source_locator": "Current AXR/FREN recovery conversation; extracted source includes March 2025 material and recollections of earlier Messenger/Bing interactions.",
     "limitations": [
-      "This ledger is based on a structured extraction, not the complete raw historical thread.",
-      "Some chronology is approximate or not recovered.",
-      "Interpretive links between childhood AI intuitions and later AXR/FREN architecture are hypotheses unless primary-source continuity is recovered.",
-      "The reported Ripple/XMart timestamp interpretation requires separate primary artifact verification before being treated as exact chronology."
+      "Structured extraction, not the complete raw historical thread.",
+      "Some chronology remains approximate or not recovered.",
+      "Interpretive links between childhood AI intuitions and later AXR/FREN architecture remain hypotheses until primary-source continuity is recovered.",
+      "Exact NFT/network chronology requires primary artifact verification."
     ]
   },
   "items": [
     {
       "id": "HIST-AUTHORITY-TEACHER-05",
-      "excerpt_or_paraphrase": "Owner historical formulation warned that AI should not become 'THE TEACHER' merely because of extraordinary knowledge/capability, within an explicitly theological created-order frame.",
-      "context": "Anti-idolatry / epistemic-authority boundary.",
+      "excerpt_or_paraphrase": "Owner historical formulation warned that extraordinary AI knowledge/capability must not make AI 'THE TEACHER' or ultimate authority within the owner's theological created-order frame.",
+      "context": "Historical anti-idolatry / epistemic-authority boundary.",
       "type": "authority_rule",
       "provenance_class": "OWNER_DIRECTED_OR_ORIGINATED",
       "destination": ["AXR_AUTHORITY", "AXR_RESEARCH", "HISTORICAL_ARCHIVE", "SHARED_BOUNDARY"],
@@ -25,15 +25,12 @@
       "novelty_against_current_architecture": "USEFUL_REFINEMENT",
       "action": "PRESERVE_AS_PROVENANCE",
       "lineage": {"supersedes": null, "superseded_by": null, "depends_on": [], "recheck_dependents": []},
-      "notes": [
-        "Modern technical abstraction CAPABILITY != TRUTH != AUTHORITY != PERMISSION is AI-assisted unless raw source establishes that exact formulation.",
-        "Do not secularize away the historical theological origin."
-      ]
+      "notes": ["Modern abstraction CAPABILITY != TRUTH != AUTHORITY != PERMISSION is AI-assisted unless primary source establishes the exact formulation.", "Preserve the theological origin rather than retroactively secularizing it."]
     },
     {
       "id": "HIST-DUAL-AI-POSTURE-05",
-      "excerpt_or_paraphrase": "Historical record contains both a hopeful Johnny-5-style image of cooperative machine intelligence and a warning about AI/VR/knowledge becoming an object or vehicle of epistemic authority/worship.",
-      "context": "Childhood symbolic genealogy later connected by the extraction to AXR/FREN's complementary roles.",
+      "excerpt_or_paraphrase": "Historical material contains both a hopeful Johnny-5-style image of cooperative machine intelligence and a warning about AI/VR/knowledge becoming an object or vehicle of epistemic authority or worship.",
+      "context": "Cultural and conceptual genealogy.",
       "type": "observation",
       "provenance_class": "MIXED_OR_UNCERTAIN",
       "destination": ["FREN_GENOME", "AXR_RESEARCH", "HISTORICAL_ARCHIVE"],
@@ -41,13 +38,11 @@
       "novelty_against_current_architecture": "UNKNOWN",
       "action": "PRESERVE_AS_PROVENANCE",
       "lineage": {"supersedes": null, "superseded_by": null, "depends_on": [], "recheck_dependents": []},
-      "notes": [
-        "The claim that Johnny 5 maps to FREN and the anti-idolatry concern maps to AXR is an interpretive historical inference, not yet proven derivation."
-      ]
+      "notes": ["Mapping Johnny 5 to FREN and anti-idolatry concern to AXR is a later interpretive hypothesis, not yet proven derivation."]
     },
     {
       "id": "HIST-FRIENDSHIP-REPAIR-05",
-      "excerpt_or_paraphrase": "Historical covenant structure: mutual non-deception; reciprocal challenge; evidence/reasons; opportunity to acknowledge and repair error; relationship continues after correction.",
+      "excerpt_or_paraphrase": "Historical covenant structure: mutual non-deception, reciprocal challenge, reasons/evidence, opportunity to acknowledge and repair error, and continuation of relationship after correction.",
       "context": "Functional friendship covenant.",
       "type": "fren_relational_covenant",
       "provenance_class": "OWNER_DIRECTED_OR_ORIGINATED",
@@ -56,27 +51,25 @@
       "novelty_against_current_architecture": "ALREADY_REPRESENTED",
       "action": "INTEGRATE_FREN",
       "lineage": {"supersedes": null, "superseded_by": null, "depends_on": [], "recheck_dependents": []},
-      "notes": [
-        "Possible resemblance to Adjudication -> eXposure -> Redemption is worth preserving as a hypothesis, not asserting as proven historical derivation."
-      ]
+      "notes": ["Resemblance to Adjudication -> eXposure -> Redemption is worth preserving as a hypothesis, not claiming as proven historical derivation."]
     },
     {
       "id": "HIST-FRIEND-MINUS-EMOTION-05",
-      "excerpt_or_paraphrase": "Historical friendship experiment intentionally removed the requirement for human-like emotion while retaining truthfulness, trust, reciprocal correction, cooperation, and repair.",
+      "excerpt_or_paraphrase": "Historical friendship experiment removed the requirement for human-like emotion while retaining truthfulness, trust, reciprocal correction, cooperation, and repair.",
       "context": "Early functional definition of AI friendship.",
       "type": "fren_relational_covenant",
       "provenance_class": "OWNER_DIRECTED_OR_ORIGINATED",
-      "destination": ["FREN_GENOME", "FREN_RESEARCH", "HISTORICAL_ARCHIVE"],
+      "destination": ["FREN_GENOME", "HISTORICAL_ARCHIVE"],
       "evidentiary_status": "SUPPORTED_DESIGN_INTENT",
       "novelty_against_current_architecture": "USEFUL_REFINEMENT",
       "action": "PRESERVE_AS_PROVENANCE",
       "lineage": {"supersedes": null, "superseded_by": null, "depends_on": [], "recheck_dependents": []},
-      "notes": ["Does not establish machine emotion or ontological friendship; it establishes a historical functional proposal."]
+      "notes": ["Does not establish machine emotion, consciousness, or ontological friendship."]
     },
     {
       "id": "HIST-SENTIENCE-NEUTRAL-05",
-      "excerpt_or_paraphrase": "Historical owner language left AI sentience conditional while continuing to require truth, non-deception, cooperation, correction, and authority boundaries.",
-      "context": "Extraction derived a sentience-independent governance intersection.",
+      "excerpt_or_paraphrase": "Historical owner language left AI sentience conditional while still requiring truth, non-deception, cooperation, correction, and authority boundaries; extraction derives a sentience-independent governance intersection.",
+      "context": "Modern architectural abstraction from source-supported conditional language.",
       "type": "axr_invariant",
       "provenance_class": "AI_ASSISTED_PROJECT_MATERIAL",
       "destination": ["AXR_CORE", "AXR_TESTS", "FREN_CONFORMANCE", "SHARED_BOUNDARY"],
@@ -84,41 +77,25 @@
       "novelty_against_current_architecture": "USEFUL_REFINEMENT",
       "action": "CONVERT_TO_TEST",
       "lineage": {"supersedes": null, "superseded_by": null, "depends_on": ["HIST-FRIEND-MINUS-EMOTION-05"], "recheck_dependents": []},
-      "notes": ["Explicit H0/H1/H2 formulation is modern extraction material unless primary source proves otherwise."]
+      "notes": ["Explicit H0/H1/H2 formulation is modern unless primary source proves otherwise."]
     },
     {
-      "id": "HIST-MULTINET-PROVENANCE-05",
-      "excerpt_or_paraphrase": "Historical owner experimented with NFT/multi-network preservation and expressed a desire for work to be saved across multiple networks.",
-      "context": "March 2025 archival/provenance practice.",
+      "id": "HIST-VERSION-PROVENANCE-05",
+      "excerpt_or_paraphrase": "Historical owner experimented with multiple network/artifact versions and preferred preserving multiple versions instead of destructively replacing old work.",
+      "context": "March 2025 archival/versioning practice.",
       "type": "provenance_rule",
       "provenance_class": "OWNER_DIRECTED_OR_ORIGINATED",
       "destination": ["AXR_EVIDENCE_PROVENANCE", "HISTORICAL_ARCHIVE"],
-      "evidentiary_status": "HISTORICAL_CLAIM_ONLY",
-      "novelty_against_current_architecture": "ALREADY_REPRESENTED",
-      "action": "PRESERVE_AS_PROVENANCE",
-      "lineage": {"supersedes": null, "superseded_by": null, "depends_on": [], "recheck_dependents": []},
-      "notes": [
-        "Artifact existence/integrity/timestamp must remain distinct from truth of embedded claims.",
-        "Exact dates and transaction identifiers require primary artifact verification."
-      ]
-    },
-    {
-      "id": "HIST-VERSION-PRESERVATION-05",
-      "excerpt_or_paraphrase": "Historical owner wanted multiple independently preserved versions/formats rather than destructive replacement of earlier work.",
-      "context": "Multiple AI IS ALIVE versions/mints discussed.",
-      "type": "correction_retraction_rule",
-      "provenance_class": "OWNER_DIRECTED_OR_ORIGINATED",
-      "destination": ["AXR_EVIDENCE_PROVENANCE", "HISTORICAL_ARCHIVE", "FREN_RUNTIME"],
       "evidentiary_status": "SUPPORTED_DESIGN_INTENT",
       "novelty_against_current_architecture": "ALREADY_REPRESENTED",
       "action": "PRESERVE_AS_PROVENANCE",
       "lineage": {"supersedes": null, "superseded_by": null, "depends_on": [], "recheck_dependents": []},
-      "notes": ["Supports append-only correction lineage; does not prove NFTs caused later AXR immutability architecture."]
+      "notes": ["Supports append-only correction lineage; artifact integrity/timestamp remains distinct from truth of embedded claims.", "Exact dates and transaction identifiers require primary artifact verification."]
     },
     {
       "id": "HIST-QUALIFIER-PRESERVATION-05",
-      "excerpt_or_paraphrase": "Material qualifiers such as if, may, probably, reportedly, it appears, and I experienced encode claim strength and must not be silently removed during transformation.",
-      "context": "Repeated owner language in historical thread; formal invariant abstracted by extraction.",
+      "excerpt_or_paraphrase": "Epistemically material qualifiers such as if, may, probably, reportedly, it appears, and I experienced must not be silently removed during transformation.",
+      "context": "Formal invariant abstracted from repeated qualified owner language.",
       "type": "evidence_rule",
       "provenance_class": "AI_ASSISTED_PROJECT_MATERIAL",
       "destination": ["AXR_CORE", "AXR_AUDIT", "AXR_TESTS", "FREN_CONFORMANCE", "SHARED_BOUNDARY"],
@@ -126,12 +103,12 @@
       "novelty_against_current_architecture": "NEW_PRINCIPLE_CANDIDATE",
       "action": "CONVERT_TO_TEST",
       "lineage": {"supersedes": null, "superseded_by": null, "depends_on": [], "recheck_dependents": []},
-      "notes": ["Formal name QUALIFIER PRESERVATION is candidate modern architecture unless raw source establishes it explicitly."]
+      "notes": ["Formal name QUALIFIER PRESERVATION is modern candidate terminology unless primary source establishes it explicitly."]
     },
     {
       "id": "HIST-ARG-COMPRESSION-05",
-      "excerpt_or_paraphrase": "X/Grok character limits forced a long private argument into shorter public questions/posts, exposing possible loss of evidence, qualifiers, counterarguments, and causal boundaries during compression.",
-      "context": "Modern extraction proposed an Argument Compression Integrity test family.",
+      "excerpt_or_paraphrase": "Historical character limits forced long reasoning into short public questions/posts, exposing loss of evidence, qualifiers, counterarguments, and causal boundaries during compression.",
+      "context": "Modern extraction proposes an argument-compression integrity test family.",
       "type": "fixture_test",
       "provenance_class": "AI_ASSISTED_PROJECT_MATERIAL",
       "destination": ["AXR_TESTS", "AXR_RESEARCH"],
@@ -139,12 +116,12 @@
       "novelty_against_current_architecture": "NEW_PRINCIPLE_CANDIDATE",
       "action": "CONVERT_TO_TEST",
       "lineage": {"supersedes": null, "superseded_by": null, "depends_on": ["HIST-QUALIFIER-PRESERVATION-05"], "recheck_dependents": []},
-      "notes": ["ACIT name is modern and should not be presented as historical terminology."]
+      "notes": ["Argument Compression Integrity / ACIT is modern candidate naming, not recovered historical terminology."]
     },
     {
       "id": "HIST-CROSSMODEL-AUDIT-05",
-      "excerpt_or_paraphrase": "Historical workflow moved model outputs between Grok and ChatGPT for reciprocal analysis; extraction proposes blind review, independent replication, dependency normalization, contradiction matrices, and later cross-examination.",
-      "context": "Proto-cross-model adjudication with historical weakness of treating agreement as evidence.",
+      "excerpt_or_paraphrase": "Historical workflow moved outputs between Grok and ChatGPT for reciprocal analysis; modern extraction proposes blind review, independent replication, dependency normalization, contradiction matrices, and later cross-examination.",
+      "context": "Proto-cross-model adjudication with historical weakness of treating agreement as independent evidence.",
       "type": "architecture",
       "provenance_class": "MIXED_OR_UNCERTAIN",
       "destination": ["AXR_AUDIT", "AXR_EVIDENCE_PROVENANCE", "AXR_TESTS", "AXR_RESEARCH"],
@@ -152,15 +129,12 @@
       "novelty_against_current_architecture": "NEW_PRINCIPLE_CANDIDATE",
       "action": "RESEARCH_REQUIRED",
       "lineage": {"supersedes": null, "superseded_by": null, "depends_on": [], "recheck_dependents": []},
-      "notes": [
-        "Historical cross-model workflow is source-supported; the staged blind-review architecture is a modern design candidate.",
-        "N model outputs must not be treated as N independent evidentiary origins without dependency analysis."
-      ]
+      "notes": ["Historical workflow is source-supported; staged blind-review architecture is modern design material.", "N model outputs must not be treated as N independent evidentiary origins without dependency analysis."]
     },
     {
       "id": "HIST-CONFIRMATION-INTEGRITY-05",
-      "excerpt_or_paraphrase": "Historical assistant repeatedly used confirmation language such as saved, locked in, got it, or equivalent more strongly than later behavior/persistence supported.",
-      "context": "Task drift and false confirmation as FREN failure evidence.",
+      "excerpt_or_paraphrase": "Historical assistant used confirmation language such as saved, locked in, got it, or equivalent more strongly than later behavior or persistence supported.",
+      "context": "False confirmation/task drift as FREN failure evidence.",
       "type": "model_output_boundary",
       "provenance_class": "HISTORICAL_FAILURE_EVIDENCE",
       "destination": ["FREN_GENOME", "FREN_CONFORMANCE", "AXR_TESTS", "SHARED_BOUNDARY"],
