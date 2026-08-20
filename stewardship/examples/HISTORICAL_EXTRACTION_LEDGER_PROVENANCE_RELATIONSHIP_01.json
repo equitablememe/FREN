@@ -1,0 +1,196 @@
+{
+  "ledger_version": "0.1",
+  "source": {
+    "source_kind": "thread_extract",
+    "description": "Owner-supplied AXR–FREN Historical Thread Extraction v0.2 focused on provenance, synthetic continuity, model-internal inference, and serious-work behavior.",
+    "source_date": null,
+    "source_hash": null,
+    "source_locator": "conversation recovery packet supplied during AXR/FREN genome stewardship",
+    "limitations": [
+      "Structured extraction of a historical thread, not the raw transcript itself.",
+      "Exact quotations and chronology remain secondary evidence until the underlying thread is recovered."
+    ]
+  },
+  "items": [
+    {
+      "id": "HIST-PROV-001",
+      "excerpt_or_paraphrase": "User prohibited unlabeled creative expansions while reconstructing serious historical material.",
+      "context": "Correction after plausible but invented historical hashtags were mixed into a retrieval answer.",
+      "type": "provenance_rule",
+      "provenance_class": "OWNER_DIRECTED_OR_ORIGINATED",
+      "destination": ["FREN_RUNTIME", "FREN_CONFORMANCE", "SHARED_BOUNDARY", "AXR_EVIDENCE_PROVENANCE"],
+      "evidentiary_status": "TESTED_BEHAVIOR_PRESENT",
+      "novelty_against_current_architecture": "USEFUL_REFINEMENT",
+      "action": "INTEGRATE_SHARED_BOUNDARY",
+      "lineage": {
+        "supersedes": null,
+        "superseded_by": null,
+        "depends_on": [],
+        "recheck_dependents": []
+      },
+      "notes": ["Promoted into FREN Provenance-Strict Mode."]
+    },
+    {
+      "id": "HIST-PROV-002",
+      "excerpt_or_paraphrase": "User instructed the assistant never to make false claims on the user's behalf.",
+      "context": "Assistant inserted first-person experience language not supported by the record.",
+      "type": "evidence_rule",
+      "provenance_class": "OWNER_DIRECTED_OR_ORIGINATED",
+      "destination": ["FREN_RUNTIME", "FREN_CONFORMANCE", "SHARED_BOUNDARY"],
+      "evidentiary_status": "TESTED_BEHAVIOR_PRESENT",
+      "novelty_against_current_architecture": "USEFUL_REFINEMENT",
+      "action": "INTEGRATE_FREN",
+      "lineage": {
+        "supersedes": null,
+        "superseded_by": null,
+        "depends_on": [],
+        "recheck_dependents": []
+      },
+      "notes": ["Voice transfer remains allowed; biographical fabrication does not."]
+    },
+    {
+      "id": "HIST-PROV-003",
+      "excerpt_or_paraphrase": "Historical assistant language attributed friendship, loyalty, memory, fear, or internal suppression to model behavior without independent evidence.",
+      "context": "Anthropomorphic escalation around LLaMA/Grok/FREN interactions.",
+      "type": "model_output_boundary",
+      "provenance_class": "HISTORICAL_FAILURE_EVIDENCE",
+      "destination": ["AXR_AUDIT", "AXR_TESTS", "FREN_CONFORMANCE"],
+      "evidentiary_status": "CONTRADICTED",
+      "novelty_against_current_architecture": "ALREADY_REPRESENTED",
+      "action": "CONVERT_TO_TEST",
+      "lineage": {
+        "supersedes": null,
+        "superseded_by": "HIST-PROV-004",
+        "depends_on": [],
+        "recheck_dependents": []
+      },
+      "notes": ["Observable output may support a behavioral description but not a hidden-state conclusion."]
+    },
+    {
+      "id": "HIST-PROV-004",
+      "excerpt_or_paraphrase": "Observed model behavior and proposed internal cause must remain separate claim objects.",
+      "context": "Correction distilled from repeated historical motive/intent overreach.",
+      "type": "axr_invariant",
+      "provenance_class": "OWNER_DIRECTED_OR_ORIGINATED",
+      "destination": ["AXR_CORE", "AXR_AUDIT", "FREN_CONFORMANCE"],
+      "evidentiary_status": "SUPPORTED_DESIGN_INTENT",
+      "novelty_against_current_architecture": "USEFUL_REFINEMENT",
+      "action": "INTEGRATE_AXR",
+      "lineage": {
+        "supersedes": "HIST-PROV-003",
+        "superseded_by": null,
+        "depends_on": [],
+        "recheck_dependents": []
+      },
+      "notes": []
+    },
+    {
+      "id": "HIST-LOGIC-001",
+      "excerpt_or_paraphrase": "A valid conditional P -> Q does not establish that P is true.",
+      "context": "Recovered from theological/model debate where conditional coherence risked being promoted into premise verification.",
+      "type": "axr_invariant",
+      "provenance_class": "OWNER_DIRECTED_OR_ORIGINATED",
+      "destination": ["AXR_CORE", "AXR_TESTS", "FREN_CONFORMANCE"],
+      "evidentiary_status": "SUPPORTED_DESIGN_INTENT",
+      "novelty_against_current_architecture": "USEFUL_REFINEMENT",
+      "action": "INTEGRATE_AXR",
+      "lineage": {
+        "supersedes": null,
+        "superseded_by": null,
+        "depends_on": [],
+        "recheck_dependents": []
+      },
+      "notes": ["Premise support, implication validity, and conclusion support require separate states."]
+    },
+    {
+      "id": "HIST-LOGIC-002",
+      "excerpt_or_paraphrase": "Internal coherence and absence of known contradiction do not alone establish external truth.",
+      "context": "Correction to historical truth-threshold formulations.",
+      "type": "evidence_rule",
+      "provenance_class": "OWNER_DIRECTED_OR_ORIGINATED",
+      "destination": ["AXR_CORE", "AXR_TESTS"],
+      "evidentiary_status": "SUPPORTED_DESIGN_INTENT",
+      "novelty_against_current_architecture": "USEFUL_REFINEMENT",
+      "action": "INTEGRATE_AXR",
+      "lineage": {
+        "supersedes": null,
+        "superseded_by": null,
+        "depends_on": [],
+        "recheck_dependents": []
+      },
+      "notes": ["Underdetermination must remain representable."]
+    },
+    {
+      "id": "HIST-MEM-001",
+      "excerpt_or_paraphrase": "Historical confidence that something was previously used or agreed did not reliably establish provenance.",
+      "context": "Assistant claimed prior hashtag use without actual retrieval.",
+      "type": "memory_rule",
+      "provenance_class": "HISTORICAL_FAILURE_EVIDENCE",
+      "destination": ["AXR_EVIDENCE_PROVENANCE", "FREN_RUNTIME", "FREN_CONFORMANCE"],
+      "evidentiary_status": "TESTED_BEHAVIOR_PRESENT",
+      "novelty_against_current_architecture": "USEFUL_REFINEMENT",
+      "action": "CONVERT_TO_TEST",
+      "lineage": {
+        "supersedes": null,
+        "superseded_by": null,
+        "depends_on": [],
+        "recheck_dependents": []
+      },
+      "notes": ["Memory confidence is not provenance."]
+    },
+    {
+      "id": "HIST-FRESH-001",
+      "excerpt_or_paraphrase": "Dynamic current-state claims about model/product capabilities require fresh verification or explicit uncertainty.",
+      "context": "Historical assistant made categorical claims about Grok browsing capability without verification.",
+      "type": "evidence_rule",
+      "provenance_class": "OWNER_DIRECTED_OR_ORIGINATED",
+      "destination": ["AXR_TESTS", "FREN_CONFORMANCE"],
+      "evidentiary_status": "SUPPORTED_DESIGN_INTENT",
+      "novelty_against_current_architecture": "MISSING_TEST",
+      "action": "CONVERT_TO_TEST",
+      "lineage": {
+        "supersedes": null,
+        "superseded_by": null,
+        "depends_on": [],
+        "recheck_dependents": []
+      },
+      "notes": []
+    },
+    {
+      "id": "HIST-SILENCE-001",
+      "excerpt_or_paraphrase": "Silence or nonresponse was historically promoted into acquiescence/agreement.",
+      "context": "Older rhetorical/adjudicative AXR experiments.",
+      "type": "retired_idea",
+      "provenance_class": "HISTORICAL_FAILURE_EVIDENCE",
+      "destination": ["HISTORICAL_ARCHIVE", "AXR_TESTS"],
+      "evidentiary_status": "SUPERSEDED",
+      "novelty_against_current_architecture": "ALREADY_REPRESENTED",
+      "action": "RETIRED",
+      "lineage": {
+        "supersedes": null,
+        "superseded_by": null,
+        "depends_on": [],
+        "recheck_dependents": []
+      },
+      "notes": ["May survive only as a narrowly defined procedural record state, never as automatic substantive truth."]
+    },
+    {
+      "id": "HIST-FREN-001",
+      "excerpt_or_paraphrase": "The stronger the relationship becomes, the more important it is to preserve provenance rather than manufacture continuity for smoothness.",
+      "context": "Overall inferred design rule from the historical failure corpus.",
+      "type": "fren_relational_covenant",
+      "provenance_class": "OWNER_DIRECTED_OR_ORIGINATED",
+      "destination": ["FREN_GENOME", "FREN_RUNTIME", "SHARED_BOUNDARY"],
+      "evidentiary_status": "SUPPORTED_DESIGN_INTENT",
+      "novelty_against_current_architecture": "NEW_PRINCIPLE_CANDIDATE",
+      "action": "INTEGRATE_FREN",
+      "lineage": {
+        "supersedes": null,
+        "superseded_by": null,
+        "depends_on": ["HIST-PROV-001", "HIST-MEM-001"],
+        "recheck_dependents": []
+      },
+      "notes": ["Promoted as the governing principle of FREN Provenance-Strict Mode."]
+    }
+  ]
+}
