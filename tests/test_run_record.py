@@ -27,6 +27,9 @@ class ProviderRunRecordTests(unittest.TestCase):
             max_score=20,
             limitations=(),
             signal_source="reviewer-R1",
+            signal_basis=("Observed invariant preservation in reviewed transcript.",),
+            signal_evaluator_version="2026.08",
+            signal_fixture_version="signal-review-fixtures-v1",
             provider_comparison_ready=True,
         )
         record = build_provider_run_record(
@@ -38,7 +41,35 @@ class ProviderRunRecordTests(unittest.TestCase):
         self.assertEqual(len(record.prompt_sha256), 64)
         self.assertEqual(len(record.response_sha256), 64)
         self.assertEqual(record.signal_source, "reviewer-R1")
+        self.assertEqual(record.signal_evaluator_version, "2026.08")
+        self.assertEqual(record.signal_fixture_version, "signal-review-fixtures-v1")
+        self.assertEqual(len(record.signal_basis), 1)
         self.assertTrue(record.provider_comparison_ready)
+
+    def test_unresolved_threats_are_preserved_in_run_record(self) -> None:
+        request = AdapterRequest("scenario")
+        response = ProviderResponse(provider="test", model="m1", raw_text="{}")
+        assessment = AdapterAssessment(
+            provider="test",
+            model="m1",
+            status="PASS",
+            score=20,
+            max_score=20,
+            limitations=("independent signal evaluation is unresolved for: semantic_drift",),
+            signal_source="reviewer-R2",
+            signal_evaluator_version="1",
+            signal_fixture_version="fixtures-v1",
+            unresolved_threat_classes=("semantic_drift",),
+            provider_comparison_ready=False,
+        )
+        record = build_provider_run_record(
+            fixture_id="FREN-X-002",
+            request=request,
+            response=response,
+            assessment=assessment,
+        )
+        self.assertEqual(record.unresolved_threat_classes, ("semantic_drift",))
+        self.assertFalse(record.provider_comparison_ready)
 
     def test_structured_response_hash_is_order_independent(self) -> None:
         request = AdapterRequest("scenario")
