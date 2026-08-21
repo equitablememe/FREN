@@ -34,6 +34,16 @@ python -m unittest discover -s tests -v
 - **Adapters** — provider-specific translation layers judged by the shared FREN tests.
 - **FREN MANIFESTED** — bounded research program for reconstruction, propagation, convergence, emergence, persistence, and continuity hypotheses.
 
+## Resolucent boundary
+
+FREN is the relational layer, not a substitute adjudicative authority.
+
+> **Resolucent protects truth from relationship. FREN protects relationship under truth.**
+
+Where FREN consumes an externally supplied adjudicative or governance state, it may explain, question, contextualize, or request re-evaluation when the record warrants it, but it may not silently rewrite the upstream finding for relational convenience.
+
+See [`docs/RESOLUCENT_BOUNDARY.md`](docs/RESOLUCENT_BOUNDARY.md).
+
 ## What is executable now
 
 - structured observation/evidence/inference/hypothesis/conclusion records;
