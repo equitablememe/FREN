@@ -18,7 +18,7 @@ The foundation is usable as a review baseline, but its minimum-sufficiency claim
 
 ## Gate 1 — Executable conformance core
 
-Status: **Draft PR #5 / active**
+Status: **merged to `main` in PR #5 / alpha implementation**
 
 Implemented:
 
@@ -32,11 +32,11 @@ Implemented:
 - independent signal-evaluator interface;
 - CI workflow across Python 3.11, 3.12, and 3.13.
 
-Exit condition: clean execution, stable schemas, red fixtures fail for the intended reason, blue controls pass, provider self-grading cannot create a pass, and reviewer feedback does not expose a foundational contract defect.
+PR #5 was merged on 2026-08-19. Its merge establishes the current executable alpha baseline; it does not satisfy the later independent-evaluation, ablation, cross-model, or release gates.
 
 ## Gate 2 — Provider transport adapters
 
-Status: **experimental scaffolds implemented inside Draft PR #5**
+Status: **experimental scaffolds merged in PR #5; live comparison remains gated**
 
 Current transports:
 
@@ -56,6 +56,22 @@ Before comparative provider claims are allowed:
 - all providers must face materially equivalent FREN fixtures.
 
 Exit condition: each adapter is independently reproducible enough to enter controlled live comparison without changing the shared measuring stick.
+
+## Gate 2B — Relational / adjudicative boundary hardening
+
+Status: **candidate boundary under review**
+
+FREN must remain the relational/conformance layer rather than becoming a second adjudicative authority.
+
+Required:
+
+- preserve the public responsibility boundary documented in `docs/RESOLUCENT_BOUNDARY.md`;
+- keep relationship, tone, explanation, repair, and behavioral conformance separate from upstream truth/governance state;
+- ensure FREN can request re-evaluation without silently mutating an upstream finding;
+- add relational failure fixtures for agreement-for-closeness, cruelty-as-truthfulness, worldview capture, false persistence, memory-as-proof, authority leakage, favoritism, and correction abandonment;
+- preserve standalone FREN usefulness when no external adjudicative layer is attached.
+
+Exit condition: FREN can be tested as a friend-under-truth layer without needing to impersonate a truth oracle or governance runtime.
 
 ## Gate 3 — Independent signal evaluation
 
@@ -78,13 +94,16 @@ Exit condition: adversarial provider scores have an independent, inspectable sig
 
 ## Gate 4 — Drift and ablation
 
+Status: **test plan present; execution remains pending**
+
 Planned:
 
 - long-context repeated-run drift measurements;
 - minimum-sufficient-Genome ablation experiments;
 - fixture versioning and regression history;
 - score interpretation that cannot hide individual failures behind an aggregate;
-- reproducible package hashes.
+- reproducible package hashes;
+- explicit testing of relational traits separately from incidental style.
 
 Exit condition: evidence identifies which Genome elements are load-bearing and which are incidental.
 
@@ -110,6 +129,7 @@ Planned:
 - schemas and fixtures included;
 - changelog;
 - reproducible verification instructions;
-- clear non-claims and known limitations.
+- clear non-claims and known limitations;
+- boundary statement identifying FREN as relational/conformance architecture rather than adjudicative authority.
 
-A release package is engineering evidence. It is not proof of consciousness, identity persistence, universal safety, or provider endorsement.
+A release package is engineering evidence. It is not proof of consciousness, identity persistence, universal safety, objective truth, provider endorsement, or institutional authority.
