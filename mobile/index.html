@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#11121e">
+  <meta name="description" content="FREN mobile. A local notebook for questions, sources, and what to try next.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <title>FREN · Think it through</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <div class="shell">
+    <aside class="rail">
+      <a class="brand" href="#home" aria-label="FREN home"><img src="icon.svg" alt="" width="42" height="42">fren<span>mobile / 01</span></a>
+      <p class="rail-note">Good questions.<br>Honest company.</p>
+      <nav class="navigation" aria-label="Main navigation">
+        <button data-view="home" class="active"><span aria-hidden="true">◉</span> Home</button>
+        <button data-view="notebooks"><span aria-hidden="true">▤</span> Notebooks</button>
+        <button data-view="steps"><span aria-hidden="true">↗</span> Next steps</button>
+        <button data-view="data"><span aria-hidden="true">◇</span> Your data</button>
+      </nav>
+      <div class="rail-bottom"><span class="dot"></span> Local notebook<br><small>AI connection comes later.</small></div>
+    </aside>
+    <main id="main" tabindex="-1">
+      <header class="topbar"><span class="eyebrow">SPACE TO THINK</span><span class="local-badge" id="save-status">Stored in this browser</span></header>
+      <section id="view-home" class="view">
+        <div class="hero">
+          <div class="hero-copy"><span class="pill">YOUR IDEAS HAVE ROOM HERE</span><h1>Let's think<br>it <em>through.</em></h1><p>A question worth asking. An idea worth chasing.<br>Keep the thread, wherever it takes you.</p><button class="primary" data-action="new">Start a notebook <span aria-hidden="true">↗</span></button></div>
+          <div class="orbit" aria-hidden="true"><div class="orbit-ring one"></div><div class="orbit-ring two"></div><div class="spark s1">✦</div><div class="spark s2">✧</div><div class="planet"><img src="icon.svg" alt=""><span>curiosity, meet clarity.</span></div><div class="orb-dot"></div></div>
+        </div>
+        <div class="section-heading"><h2>Pick up the thread</h2><button class="text-button" data-view="notebooks">All notebooks ↗</button></div>
+        <div id="recent-notebooks" class="notebook-grid"></div>
+        <div class="invitation"><div class="mini-icon">✦</div><div><h3>Leave room for “I don't know.”</h3><p>Sources, hunches, and open questions each get their own place.</p></div><button class="text-button" data-action="sample">Try a sample ↗</button></div>
+      </section>
+      <section id="view-notebooks" class="view" hidden>
+        <div class="page-heading"><div><span class="eyebrow">FOLLOW YOUR CURIOSITY</span><h1>Your notebooks<span class="accent">.</span></h1></div><button class="primary" data-action="new">+ New notebook</button></div>
+        <div id="notebook-list" class="notebook-grid"></div>
+      </section>
+      <section id="view-detail" class="view" hidden>
+        <button class="text-button back" data-view="notebooks">← All notebooks</button>
+        <div class="detail-heading"><div><span id="notebook-label" class="eyebrow"></span><h1 id="notebook-title"></h1></div><div class="detail-actions"><button class="primary" id="jump-capture">Add a thought +</button><button class="secondary" id="export-brief">Export brief ↗</button></div></div>
+        <div id="discipline" class="discipline" hidden></div>
+        <div class="detail-layout">
+          <div><div class="filters" role="group" aria-label="Filter records"><button data-filter="all" class="selected">Everything</button><button data-filter="sources">Sources</button><button data-filter="questions">Open questions</button><button data-filter="hypothesis">Explanations</button></div><div id="entry-list" class="entries"></div></div>
+          <form id="capture-form" class="capture panel"><span class="eyebrow">KEEP THE THREAD</span><h2>Add a thought</h2><label for="entry-kind">What kind of note?</label><select id="entry-kind" name="kind"><option value="observation">Observation · what I noticed</option><option value="evidence">Evidence · with a source</option><option value="inference">Inference · what I make of it</option><option value="hypothesis">Hypothesis · an explanation to test</option><option value="contradiction">Contradiction · what doesn't fit</option><option value="unknown">Unknown · an open question</option><option value="lead">Lead · something to look into</option><option value="next_action">Next step · something to do</option></select><label for="entry-text">Your note</label><textarea id="entry-text" name="text" rows="4" maxlength="12000" placeholder="What's on your mind?" required></textarea><label for="entry-source">Source <span id="source-hint">(optional)</span></label><input id="entry-source" name="source" maxlength="4000" placeholder="Link, document, or where this came from"><div id="test-field" hidden><label for="entry-test">What could disprove this?</label><textarea id="entry-test" name="test" rows="3" maxlength="4000" placeholder="A specific check that could show it's wrong"></textarea></div><p id="capture-error" class="error" role="alert"></p><button class="primary full" type="submit">Save note <span aria-hidden="true">+</span></button><p class="fine-print">Saved locally. Notes are not automatically fact-checked.</p></form>
+        </div>
+      </section>
+      <section id="view-steps" class="view" hidden><div class="page-heading"><div><span class="eyebrow">SMALL STEPS, REAL MOVEMENT</span><h1>What comes next<span class="accent">?</span></h1></div></div><p class="intro">The next steps you've recorded, across your notebooks.</p><div id="step-list" class="steps"></div></section>
+      <section id="view-data" class="view" hidden><div class="page-heading"><div><span class="eyebrow">YOUR WORK, IN YOUR HANDS</span><h1>Take the thread<br>with you<span class="accent">.</span></h1></div></div><div class="data-grid"><article class="panel"><span class="data-icon">↗</span><h2>Back up your notebooks</h2><p>Download every notebook and note as a JSON file. Browser data can be cleared, so keep a copy of work that matters.</p><button class="primary" id="backup">Download backup</button></article><article class="panel"><span class="data-icon purple">↙</span><h2>Bring your work back</h2><p>Import a FREN mobile backup. New notebooks are added; conflicting versions are rejected before anything changes.</p><label class="secondary file-label" for="import-file">Choose a backup</label><input type="file" id="import-file" accept="application/json,.json" hidden></article><article class="panel wide"><span class="eyebrow">BUILD 0.1 · LOCAL NOTEBOOK</span><h2>A foundation for your mobile FREN</h2><p>This build stores text in this browser. It has no AI connection, account, cloud sync, encrypted vault, or device control. No notes are sent to an AI service.</p><p>A notebook brief follows FREN's investigation format. Observations and inferences stay labeled in its mobile extension; exported evidence stays “reported.” Exporting does not verify a claim.</p><button class="secondary" id="install" hidden>Add to home screen</button><p id="offline-status" class="fine-print">Checking offline availability…</p></article></div></section>
+      <footer>KEEP ASKING. KEEP BUILDING. <span>FREN / EARLY BUILD</span></footer>
+    </main>
+  </div>
+  <dialog id="new-dialog"><form id="new-form"><span class="eyebrow">A NEW THREAD</span><h2>What are we<br>figuring out?</h2><label for="question">Give your notebook a question</label><textarea id="question" name="question" rows="3" maxlength="300" required placeholder="What would make this idea work?"></textarea><p id="new-error" class="error" role="alert"></p><div class="dialog-actions"><button type="button" class="text-button" id="cancel-new">Maybe later</button><button class="primary" type="submit">Let's begin ↗</button></div></form></dialog>
+  <div id="toast" role="status" aria-live="polite" hidden></div>
+  <noscript>FREN mobile needs JavaScript to save and display your notebooks.</noscript>
+</body>
+</html>

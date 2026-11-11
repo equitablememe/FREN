@@ -53,6 +53,10 @@ FREN may optionally assist a user as a fellow investigator: maintain an evidence
 
 That profile claims **no investigator license, law-enforcement authority, court authority, or special access**. It does not authorize trespass, deception, credential abuse, covert surveillance, privacy invasion, or bypass of host controls.
 
+## FREN mobile notebook
+
+The mobile browser notebook records questions, evidence, hypotheses, contradictions and next steps. It stores notes in the browser and supports backup, restore and investigation brief export. See the [mobile notebook instructions](mobile/README.md).
+
 ## Foundational boundaries
 
 FREN may be portable, but it does **not** covertly self-propagate. Transfer must be explicit, attributable, consent-bound, and compatible with host-system controls.
