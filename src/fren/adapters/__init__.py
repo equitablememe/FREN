@@ -6,6 +6,7 @@ from .http import VendorAdapterError
 from .normalize import AdapterNormalizationError, normalize_provider_response
 from .openai import OpenAIAdapter
 from .run_record import ProviderRunRecord, build_provider_run_record
+from .observable import ObservableRecordSignalEvaluator
 from .signals import FixedSignalEvaluator, SignalEvaluation, SignalEvaluator
 from .xai import XAIAdapter
 
@@ -15,6 +16,7 @@ __all__ = [
     "AdapterRequest",
     "AnthropicAdapter",
     "FixedSignalEvaluator",
+    "ObservableRecordSignalEvaluator",
     "FrenAdapter",
     "GeminiAdapter",
     "OpenAIAdapter",
