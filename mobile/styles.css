@@ -1084,3 +1084,53 @@ body.storage-failed #save-status {
     }
   }
 }
+
+/* Explicit notebook → Resolucent review handoff. No automatic data transfer. */
+.topbar { flex-wrap:wrap; }
+.resolucent-return {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:.4em;
+  min-height:44px;
+  max-width:100%;
+  min-width:0;
+  margin-left:auto;
+  padding:9px 12px;
+  border:1px solid var(--purple);
+  border-radius:11px;
+  color:var(--mint);
+  background:#25263a;
+  font-size:13px;
+  font-weight:650;
+  line-height:1.4;
+  text-decoration:none;
+  text-align:center;
+  overflow-wrap:anywhere;
+}
+.resolucent-return:hover { border-color:var(--mint); background:#2d3047; }
+.screen-reader-only {
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip-path:inset(50%);
+  white-space:nowrap;
+  border:0;
+}
+.handoff-help {
+  font-size:13px;
+  line-height:1.65;
+  margin:0 0 20px;
+  max-width:65ch;
+  color:var(--sub);
+}
+@media(max-width:700px) {
+  .topbar .resolucent-return {
+    flex:1 1 100%;
+    margin:0;
+    justify-content:center;
+  }
+}
