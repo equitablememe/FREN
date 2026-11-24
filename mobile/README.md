@@ -2,6 +2,12 @@
 
 The mobile notebook provides a browser interface for recording an investigation or working through a question. Start a notebook, add notes with sources or tests where relevant, and track next steps.
 
+**Public FREN Mobile:** https://equitablememe.github.io/FREN/ (GitHub Pages; no account, model connection or cloud sync).
+
+The **Return to Resolucent review ↩** link opens https://www.resolucent.com/#fren-handoff in the same browser tab, avoiding unreliable popups on some browsers. Export a notebook with **Export brief** first; then select that exported file on Resolucent. Returning does not send notes automatically.
+
+**Important migration note:** browsers isolate local storage by site address. Notes saved at localhost, another FREN address, or another device will not appear automatically at the public Pages URL. Open the old location, choose **Your data → Download backup**, and import that backup from **Your data → Bring your work back** at the public address. Keep backups of work that matters.
+
 Run this from the repository root to serve the app locally.
 
 ```sh
