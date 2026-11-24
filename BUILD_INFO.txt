@@ -1,0 +1,7 @@
+FREN Mobile / public GitHub Pages static snapshot
+Source repo: equitablememe/FREN
+Source revision: 338efc062aca95d4ff471808f201c5441d974a61
+Source directory: mobile/
+Application: local browser-only notebook, no cloud account or AI model service.
+Update: after approved changes to main/mobile, re-publish those file blobs to gh-pages root.
+License: Apache-2.0 (see LICENSE).
